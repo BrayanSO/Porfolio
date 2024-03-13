@@ -1,0 +1,22 @@
+/* MyCarousel.css */
+.my-carousel {
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Ocultar contenido fuera del carrusel */
+  height: auto;
+  width: auto;
+  margin-left: 25%;
+  margin-top: 200px;
+  margin-bottom: 360px;
+}
+
+/* Estilo para la descripción */
+.legend {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  color: white; /* Texto blanco */
+  padding: 10px; /* Espaciado interno */
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 0; /* En la parte inferior */
+  left: 0; /* En el lado izquierdo */
+  width: 100%; /* Ancho completo */
+  margin: 0; /* Sin margen */
+}

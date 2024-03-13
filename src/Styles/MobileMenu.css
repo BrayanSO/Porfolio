@@ -1,0 +1,39 @@
+/* Estilos para dispositivos con un ancho máximo de 768px (pantallas pequeñas) */
+@media screen and (max-width: 768px) {
+  .button-container {
+    display: none; /* Oculta el menú superior en dispositivos móviles */
+  }
+  
+  .mobile-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Color de fondo del menú móvil */
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #ddd; /* Borde superior del menú móvil */
+    z-index: 9999;
+  }
+  
+  .mobile-menu button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333; /* Color del texto del menú móvil */
+    cursor: pointer;
+  }
+}
+
+/* Estilos para dispositivos con un ancho mínimo de 769px (pantallas grandes) */
+@media screen and (min-width: 769px) {
+  .button-container {
+    display: flex; /* Muestra el menú superior en pantallas grandes */
+  }
+  
+  .mobile-menu {
+    display: none; /* Oculta el menú móvil en pantallas grandes */
+  }
+}

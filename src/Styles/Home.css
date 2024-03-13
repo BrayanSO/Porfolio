@@ -1,0 +1,144 @@
+.homepage {
+  text-align: center; /* Centra el contenido */
+  position: relative;
+  color: white; /* Cambia el color del texto */
+}
+
+.homepage-image {
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  width: 350px; /* Ajusta el tamaño de la imagen */
+  margin-top: 150px; /* Margen superior por defecto */
+}
+.coin-rotation {
+  animation: rotate-coin 2s linear infinite;
+}
+.coin-rotation {
+  transition: transform 1s ease-out;
+}
+
+.rotate-zero {
+  transition: transform 0.5s ease-in;
+}
+
+@keyframes rotate-coin {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+.contact {
+  margin-right: 5px;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  background-color: #F0AD4E;
+}
+
+.contact:hover {
+  transform: translateY(-3px); 
+  background-color: #337AB7; 
+  color: white; 
+}
+.icon {
+  margin-right: 5px; /* Ajusta el margen derecho del icono */
+  color: white;
+}
+
+
+.Proyect {
+  margin-left: 5px;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  background-color: #F0AD4E;
+}
+button.Proyect:hover {
+  transform: translateY(-3px); 
+  background-color:#337AB7; 
+  color: white; 
+}
+p {
+  padding: 2px;
+}
+
+.homepage-text2 {
+  font-size: 26px; /* Ajusta el tamaño del texto */
+
+}
+
+.homepage-text3 {
+  font-size: 36px; /* Ajusta el tamaño del texto */
+  margin: auto;
+  font-weight: 300;
+  animation: lights 5s 750ms linear infinite;
+}
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+  30% { 
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  40% { 
+    color: hsl(230, 100%, 95%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+}
+
+.homepage-text4 {
+  font-size: 20px; /* Ajusta el tamaño del texto */
+  margin-bottom: 20px; /* Agrega margen inferior al texto */
+  
+}
+
+/* Clases de Bootstrap para ajustar márgenes en dispositivos móviles */
+@media (max-width: 767px) {
+  .homepage-image {
+    margin-top: 1px; /* Margen superior reducido en dispositivos móviles */
+    width: 250px;
+    
+  }
+  .homepage-text4 {
+    display: none; /* Oculta el elemento en dispositivos móviles */
+  }
+}
+

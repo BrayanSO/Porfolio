@@ -1,0 +1,48 @@
+.toggle-button {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  background-color: #f0ad4e;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 15px;
+}
+
+.toggle-button.active {
+  background-color: #337ab7;
+}
+
+.knob {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: left 0.3s;
+}
+
+.toggle-button.active .knob {
+  left: 44px;
+}
+
+.toggle-button span {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: white;
+  transition: transform 0.3s, opacity 0.3s, left 0.3s; /* Añadida la transición para la propiedad 'left' */
+  opacity: 1;
+}
+
+.toggle-button.active span {
+  transform: translate(-50%, -50%); /* Ajustado el transform para centrar el texto al inicio */
+  left: 20px; /* Movido hacia el otro lado cuando el botón está activo */
+  opacity: 1;
+}
+
