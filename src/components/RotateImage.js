@@ -9,19 +9,20 @@ const RotateImage = ({ imageUrl }) => {
   const imageRef = useRef(null);
 
   const handleMouseDown = (event) => {
+    event.preventDefault(); // Evitar el comportamiento predeterminado del mouse
     setIsMouseDown(true);
-    setStartX(event.clientX);
+    setStartX(event.clientX || event.touches[0].clientX);
     setStartRotation(rotation);
   };
 
   const handleMouseUp = () => {
     setIsMouseDown(false);
   };
-  
 
   const handleMouseMove = (event) => {
     if (isMouseDown) {
-      const deltaX = event.clientX - startX;
+      const clientX = event.clientX || event.touches[0].clientX;
+      const deltaX = clientX - startX;
       const maxDeltaX = 100; // Ajusta esto para cambiar la amplitud del movimiento
       const maxRotation = 90; // Ajusta esto para cambiar la cantidad de rotación máxima
       const newRotation = startRotation + (Math.sin(deltaX / maxDeltaX * Math.PI) * maxRotation);
@@ -31,9 +32,12 @@ const RotateImage = ({ imageUrl }) => {
 
   return (
     <img
-    src={imageUrl}
-    alt="Imagen de muestra"
-    className={`homepage-image ${isMouseDown ? 'coin-rotation' : ''}`}
+      src={imageUrl}
+      alt="Imagen de muestra"
+      className={`homepage-image ${isMouseDown ? 'coin-rotation' : ''}`}
+      onTouchStart={handleMouseDown}
+      onTouchEnd={handleMouseUp}
+      onTouchMove={handleMouseMove}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
