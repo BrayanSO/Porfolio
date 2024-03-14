@@ -3,7 +3,7 @@ import React from 'react';
 import '../Styles/Header.css';
 import ToggleButton from '../components/ToogleButton';
 import Skills from "../components/Skills";
-import MyCarousel from "./Proyects.js";
+import Proyects from './Proyects.js';
 import Home from './Home.js';
 import ContactMe from './ContactMe.js';
 import MobileMenu from './MobileMenu.js';
@@ -49,11 +49,11 @@ class App extends React.Component {
     return (
       <div>
         <div className="button-container col-md-12 col-xs-12">
-          <button onClick={() => this.goToPage('home')}>{language === 'en' ? 'Home' : 'Inicio'}</button>
-          <button onClick={() => this.goToPage('skills')}>{language === 'en' ? 'Habilidades' : 'Skills'}</button>
-          <button onClick={() => this.goToPage('proyects')}>{language === 'en' ? 'Proyectos' : 'Proyects'}</button>
-          <button onClick={() => this.goToPage('contact')}>{language === 'en' ? 'Contactame' : 'Contact'}</button>
-          <ToggleButton label={language === 'es' ? 'Esp' : 'Eng'} onChange={this.toggleLanguage} />
+          <button onClick={() => this.goToPage('home')}>{language === 'es' ? 'Home' : 'Inicio'}</button>
+          <button onClick={() => this.goToPage('skills')}>{language === 'es' ? 'Habilidades' : 'Skills'}</button>
+          <button onClick={() => this.goToPage('proyects')}>{language === 'es' ? 'Proyectos' : 'Proyects'}</button>
+          <button onClick={() => this.goToPage('contact')}>{language === 'es' ? 'Contactame' : 'Contact'}</button>
+          <ToggleButton label={language === 'es' ? 'Eng' : 'Esp'} onChange={this.toggleLanguage} />
         </div>
         <div className="content">
           <div id="home" className="page1">
@@ -66,7 +66,7 @@ class App extends React.Component {
           </div>
           <div id="proyects" className="page3">
             <h2 className='tproyects'>{language === 'en' ? 'Proyectos' : 'Proyects'}</h2>
-            <MyCarousel></MyCarousel>
+            <Proyects></Proyects>
           </div>
           <div id="contact" className="page4">
             <h2 className='tcontact'>{language === 'en' ? 'Contactame' : 'contact'}</h2>

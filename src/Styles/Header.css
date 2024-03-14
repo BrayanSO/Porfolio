@@ -43,7 +43,7 @@
 
 .content {
   padding-top: 20px; /* Ajusta esto al tamaño del menú cuando es más grande */
-  background-color: black;
+  background-color: gray
 }
 
 .page1, .page2 {

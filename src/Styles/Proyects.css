@@ -1,22 +1,36 @@
 /* MyCarousel.css */
 .my-carousel {
-  border-radius: 10px; /* Bordes redondeados */
-  overflow: hidden; /* Ocultar contenido fuera del carrusel */
-  height: auto;
-  width: auto;
-  margin-left: 25%;
+  border-radius: 20%; /* Bordes redondeados */
+  height: 400px;
+  width: 900px;
   margin-top: 200px;
   margin-bottom: 360px;
+  align-items: center;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-/* Estilo para la descripción */
-.legend {
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-  color: white; /* Texto blanco */
-  padding: 10px; /* Espaciado interno */
-  position: absolute; /* Posicionamiento absoluto */
-  bottom: 0; /* En la parte inferior */
-  left: 0; /* En el lado izquierdo */
-  width: 100%; /* Ancho completo */
-  margin: 0; /* Sin margen */
+/* Nuevos estilos para la división de información e imagen */
+.proyect-container {
+  display: flex;
+  align-items: center;
+}
+
+.proyect-info {
+  flex: 1;
+  padding: 20px;
+  color: white;
+}
+
+.img1 {
+  max-width: 60%; /* ajusta el tamaño de la imagen según sea necesario */
+}
+
+@media screen and (max-width: 769px) {
+  .my-carousel {
+    width: 350px; /* Muestra el menú superior en pantallas grandes */
+    height: 300px;
+    margin-top: 80px;
+  }
 }
