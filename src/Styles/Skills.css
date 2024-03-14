@@ -6,7 +6,7 @@
   margin: 50px auto;
   margin-top: 200px;
   border: 2px solid rgb(0, 0, 0);
-  padding: 40px;
+  padding: 2px;
   border-radius: 10%;
   background-color: black;
 }
@@ -123,4 +123,18 @@
   font-size: 14px;
   text-align: center;
   margin-left: 5px;
+}
+/* Estilos para dispositivos con un ancho mínimo de 769px (pantallas grandes) */
+@media screen and (max-width: 769px) {
+  .portfolio {
+    width: 300px;; /* Muestra el menú superior en pantallas grandes */
+    margin-top: 80px;
+  
+  }
+  
+  .skill {
+    margin-top: 20px;
+    width: 80px; /* Oculta el menú móvil en pantallas grandes */
+    height: 70px;
+  }
 }

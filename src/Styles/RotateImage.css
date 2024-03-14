@@ -21,4 +21,7 @@
   @media screen and (max-width: 769px) {
     .homepage-image {
       margin-top: 15px; /* Muestra el menú superior en pantallas grandes */
-    }}
+      width: 250px;
+    }
+    
+  }
