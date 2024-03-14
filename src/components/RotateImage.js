@@ -1,11 +1,10 @@
 import React, { useState, useRef } from 'react';
-import "../Styles/RotateImage.css"
+import "../Styles/RotateImage.css";
 
 const RotateImage = ({ imageUrl }) => {
   const [startX, setStartX] = useState(null);
   const [startRotation, setStartRotation] = useState(0);
   const [rotation, setRotation] = useState(0);
-  const [isMouseDown, setIsMouseDown] = useState(false);
   const imageRef = useRef(null);
 
   const handleStart = (clientX) => {
@@ -33,31 +32,34 @@ const RotateImage = ({ imageUrl }) => {
 
   const handleMouseDown = (event) => {
     event.preventDefault();
-    setIsMouseDown(true);
     handleStart(event.clientX);
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
   };
 
   const handleMouseMove = (event) => {
     event.preventDefault();
-    if (isMouseDown) {
-      handleMove(event.clientX);
-    }
+    handleMove(event.clientX);
   };
 
   const handleMouseUp = () => {
-    setIsMouseDown(false);
+    document.removeEventListener('mousemove', handleMouseMove);
+  };
+
+  const handleResetRotation = () => {
+    setRotation(0);
   };
 
   return (
     <img
       src={imageUrl}
       alt="Imagen de muestra"
-      className={`homepage-image ${isMouseDown ? 'coin-rotation' : ''}`}
+      className={`homepage-image ${rotation !== 0 ? 'coin-rotation' : ''}`}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
+      onClick={handleResetRotation}
       ref={imageRef}
       style={{ transform: `rotate(${rotation}deg)` }}
     />
