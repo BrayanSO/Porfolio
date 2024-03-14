@@ -9,12 +9,13 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #fff; /* Color de fondo del menú móvil */
+    background-color: transparent; /* Color de fondo del menú móvil */
     padding: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-top: 1px solid #ddd; /* Borde superior del menú móvil */
+    border-radius: 10%;
     z-index: 9999;
   }
   

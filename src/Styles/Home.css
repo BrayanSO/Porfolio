@@ -3,27 +3,6 @@
   position: relative;
   color: white; /* Cambia el color del texto */
 }
-
-.homepage-image {
-  border-radius: 50%; /* Hace que la imagen sea circular */
-  width: 350px; /* Ajusta el tamaño de la imagen */
-  margin-top: 150px; /* Margen superior por defecto */
-}
-.coin-rotation {
-  animation: rotate-coin 2s linear infinite;
-}
-.coin-rotation {
-  transition: transform 1s ease-out;
-}
-
-.rotate-zero {
-  transition: transform 0.5s ease-in;
-}
-
-@keyframes rotate-coin {
-  0% { transform: rotateY(0deg); }
-  100% { transform: rotateY(360deg); }
-}
 .contact {
   margin-right: 5px;
   font-size: 14px;
@@ -71,7 +50,7 @@ p {
 }
 
 .homepage-text3 {
-  font-size: 36px; /* Ajusta el tamaño del texto */
+  font-size: 33px; /* Ajusta el tamaño del texto */
   margin: auto;
   font-weight: 300;
   animation: lights 5s 750ms linear infinite;
