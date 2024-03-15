@@ -14,7 +14,6 @@
 /* Nuevos estilos para la división de información e imagen */
 .proyect-container {
   display: flex;
-  align-items: center;
 }
 
 .proyect-info {
@@ -27,10 +26,35 @@
   max-width: 60%; /* ajusta el tamaño de la imagen según sea necesario */
 }
 
-@media screen and (max-width: 769px) {
-  .my-carousel {
-    width: 350px; /* Muestra el menú superior en pantallas grandes */
-    height: 300px;
-    margin-top: 80px;
+/* Estilos para modo celular */
+@media screen and (max-width: 768px) {
+  .proyect-container {
+    flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    text-align: center; /* Centra el texto */
+   
   }
+
+  .proyect-info {
+    order: 2; /* Cambia el orden para que el texto aparezca después de la imagen */
+    padding: 10px; /* Ajusta el padding del texto */
+    color: white;
+  }
+
+  .img1 {
+    order: 1; /* Cambia el orden para que la imagen aparezca antes del texto */
+    margin-bottom: 10px; /* Añade un margen inferior a la imagen */
+    max-width: 99%; 
+  }
+  .my-carousel {
+  width: auto;
+  height: auto;
+  text-align: center;
+  }
+  .proyect-info {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    
+  }
+  
 }

@@ -59,6 +59,7 @@
 
 .page3 {
   background-image: url('../Images//background1.jpg'); /* Ruta relativa a la ubicación del archivo CSS */
+  
 }
 
 .page4 {
@@ -78,7 +79,7 @@
 
 .tproyects {
   text-align: center;
-  padding-top: 100px;
+  padding-top: 200px;
   color: white;
 }
 
@@ -86,6 +87,7 @@
   color: white;
   text-align: center;
   margin-bottom: 300px;
+  margin-top: 200px;
 }
 @media screen and (max-width: 769px) {
   .page1 {
@@ -94,6 +96,9 @@
   }
   .page2{
     height: 850px;
+  }
+  .page3{
+    margin-top: 1px;
   }
   .tskills {
     margin-top: 20px;
