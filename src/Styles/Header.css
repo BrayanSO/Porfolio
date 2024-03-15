@@ -41,7 +41,7 @@
   background-color: transparent;
 }
 
-.page1, .page2 {
+.page1, .page2, .page3, .page4 {
   height: 100vh; 
   padding: 20px;
   background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
@@ -57,6 +57,13 @@
   background-image: url('../Images//background2.jpg'); /* Ruta relativa a la ubicación del archivo CSS */
 }
 
+.page3 {
+  background-image: url('../Images//background1.jpg'); /* Ruta relativa a la ubicación del archivo CSS */
+}
+
+.page4 {
+  background-image: url('../Images//background2.jpg'); /* Ruta relativa a la ubicación del archivo CSS */
+}
 .thome {
   margin-left: 50%;
   font-size: 1px;
@@ -71,7 +78,6 @@
 
 .tproyects {
   text-align: center;
-  margin-top: 80px;
   padding-top: 100px;
   color: white;
 }

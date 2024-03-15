@@ -6,6 +6,7 @@ import proyecto1 from '../Images/proyecto1.png'; // Importa la imagen directamen
 
 const Proyects = () => {
   return (
+  <div className='page'> 
     <Carousel showThumbs={false} className="my-carousel">
       <div className="proyect-container">
         <div className="proyect-info">
@@ -29,6 +30,7 @@ const Proyects = () => {
         <img src="https://via.placeholder.com/600x400" alt="Imagen 3" />
       </div>
     </Carousel>
+    </div>
   );
 };
 
