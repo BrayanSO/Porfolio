@@ -128,7 +128,7 @@
 @media screen and (max-width: 769px) {
   .portfolio {
     width: 300px;; /* Muestra el menú superior en pantallas grandes */
-    margin-top: 80px;
+    margin-top: 50px;
   
   }
   

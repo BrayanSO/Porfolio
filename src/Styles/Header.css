@@ -41,11 +41,6 @@
   background-color: transparent;
 }
 
-.content {
-  padding-top: 20px; /* Ajusta esto al tamaño del menú cuando es más grande */
-  background-color: gray
-}
-
 .page1, .page2 {
   height: 100vh; 
   padding: 20px;
@@ -85,4 +80,17 @@
   color: white;
   text-align: center;
   margin-bottom: 300px;
+}
+@media screen and (max-width: 769px) {
+  .page1 {
+    height: 655px; 
+    margin-bottom: -10px;
+  }
+  .page2{
+    height: 850px;
+  }
+  .tskills {
+    margin-top: 20px;
+  }
+
 }
