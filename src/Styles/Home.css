@@ -102,6 +102,9 @@ p {
   }
   
 }
+P{
+  padding: 20px;
+}
 
 .homepage-text4 {
   font-size: 20px; /* Ajusta el tamaño del texto */
@@ -118,6 +121,9 @@ p {
   }
   .homepage-text4 {
     display: none; /* Oculta el elemento en dispositivos móviles */
+  }
+  p{
+    padding: 0px;
   }
 }
 
