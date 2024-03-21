@@ -77,7 +77,14 @@ const ContactMe = () => {
       <div className="code-example">
       <div>
      <code>
-        Preparar codigo de Broma
+     def simular_contacto(): <br></br>
+    print("Iniciando proceso de contacto...")<br></br>
+    for i in range(3):<br></br>
+        print("...", end=" ")<br></br>
+    print("\n¡Éxito! Han contactado contigo.") <br></br>
+
+      simular_contacto()
+
        </code>
        </div>
       </div>

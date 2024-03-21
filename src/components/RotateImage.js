@@ -14,10 +14,19 @@ const RotateImage = ({ imageUrl }) => {
 
   const handleMove = (clientX) => {
     const deltaX = clientX - startX;
-    const maxDeltaX = 100; // Ajusta esto para cambiar la amplitud del movimiento
-    const maxRotation = 90; // Ajusta esto para cambiar la cantidad de rotación máxima
-    const newRotation = startRotation + (Math.sin(deltaX / maxDeltaX * Math.PI) * maxRotation);
-    setRotation(newRotation);
+    const maxDeltaX = 100; // Ajusta esto para cambiar la sensibilidad al movimiento
+    const maxRotation = 180; // Ajusta esto para cambiar la velocidad máxima de rotación
+
+    // Calcula la velocidad de rotación basada en la distancia recorrida
+    const speed = Math.abs(deltaX) / maxDeltaX * maxRotation;
+
+    // Aplica la rotación considerando la dirección del movimiento
+    const direction = deltaX > 0 ? 1 : -1;
+    const newRotation = startRotation + (direction * speed);
+
+    // Limita la rotación al rango de -180 a 180 grados
+    const clampedRotation = newRotation % 360;
+    setRotation(clampedRotation);
   };
 
   const handleTouchStart = (event) => {
