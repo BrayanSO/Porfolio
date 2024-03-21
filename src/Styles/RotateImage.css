@@ -1,27 +1,35 @@
 .homepage-image {
-    border-radius: 50%; /* Hace que la imagen sea circular */
-    width: 350px; /* Ajusta el tamaño de la imagen */
-    margin-top: 250px; /* Margen superior por defecto */
-  }
-  .coin-rotation {
-    animation: rotate-coin 2s linear infinite;
-  }
-  .coin-rotation {
-    transition: transform 1s ease-out;
-  }
-  
-  .rotate-zero {
-    transition: transform 0.5s ease-in;
-  }
-  @keyframes rotate-coin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotateY(360deg); }
-  }
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  width: 350px; /* Ajusta el tamaño de la imagen */
+  margin-top: 250px; /* Margen superior por defecto */
+  transition: transform 1s ease-out; /* Agrega transición para el cambio de rotación */
+}
 
-  @media screen and (max-width: 769px) {
-    .homepage-image {
-      margin-top: 70px; /* Muestra el menú superior en pantallas grandes */
-      width: 250px;
-    }
-    
+.coin-rotation {
+  animation: rotate-coin 2s linear infinite;
+}
+
+.rotate-zero {
+  transition: transform 0.5s ease-in; /* Transición al restablecer la rotación */
+}
+
+@keyframes rotate-coin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotateY(320deg); }
+}
+
+@media screen and (max-width: 769px) {
+  .homepage-image {
+    margin-top: 70px; /* Muestra el menú superior en pantallas grandes */
+    width: 250px;
   }
+}
+
+/* Añade las clases para controlar la velocidad de la animación */
+.fast {
+  animation-duration: 0.5s; /* Velocidad más rápida */
+}
+
+.faster {
+  animation-duration: 0.3s; /* Velocidad aún más rápida */
+}
