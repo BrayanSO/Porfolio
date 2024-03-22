@@ -29,16 +29,18 @@ const Proyects = () => {
               Visitar NewCodecr
               <img src={icono}alt="Icono Personalizado" className="icono" />
             </a>
-          </div>
+          </div> 
+          
           <img src={proyecto2} alt="Imagen 2" />
+          {/*}
         </div>
         <div className="proyect-container">
           <div className="proyect-info">
             <h2>Información 3</h2>
             <p>Descripción 3</p>
           </div>
-          <img src="https://via.placeholder.com/600x400" alt="Imagen 3" />
-        </div>
+          <img src="https://via.placeholder.com/600x400" alt="Imagen 3" />{*/}
+  </div>   
       </Carousel>
     </div>
   );
