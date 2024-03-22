@@ -19,8 +19,8 @@
 }
 .homepage-image:hover,
 .homepage-image:focus {
-  transform: scale(1.1) !important; /* Aumenta el tamaño de la imagen en un 10% */
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Agrega un resplandor al borde */
+  transform: scale(1.05) !important; /* Aumenta el tamaño de la imagen en un 10% */
+  box-shadow: 0 0 15px rgb(214, 148, 56); /* Agrega un resplandor al borde */
 }
 
 
@@ -30,8 +30,8 @@
     width: 250px;
   }
   .homepage-image:active {
-    transform: scale(1.1); /* Aumenta el tamaño de la imagen en un 10% */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Agrega un resplandor al borde */
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen en un 10% */
+    box-shadow: 0 0 15px rgba(214,148,56); /* Agrega un resplandor al borde */
   }
 }
 

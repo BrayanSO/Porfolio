@@ -13,7 +13,7 @@ const RotateImage = ({ imageUrl }) => {
   };
   const handleMove = (clientX) => {
     const deltaX = clientX - startX;
-    const maxDeltaX = 140; // cambiar la sensibilidad al movimiento, maximo
+    const maxDeltaX = 300; // cambiar la sensibilidad al movimiento, maximo
     const maxRotation = 60; // cambiar la velocidad máxima de rotación , Maximo 200
   
     // Calcula la velocidad de rotación basada en la distancia recorrida

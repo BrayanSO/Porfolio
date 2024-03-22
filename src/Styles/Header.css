@@ -50,20 +50,24 @@
 }
 
 .page1 {
-  background-image: url('../Images//background1.jpg'); /* Ruta relativa a la ubicación del archivo CSS */
-}
+ /* background-image: url('../Images//Proyects.jpg'); */
+ background-color: black;
+ 
+}  
 
 .page2 {
-  background-image: url('../Images//background2.jpg'); /* Ruta relativa a la ubicación del archivo CSS */
+  /* background-image: url('../Images//background2.jpg'); */
+  background-color: black;
+ 
 }
 
 .page3 {
-  background-image: url('../Images//background1.jpg'); /* Ruta relativa a la ubicación del archivo CSS */
+  background-image: url('../Images//Proyects.jpg');  
   
 }
 
 .page4 {
-  background-image: url('../Images//background2.jpg'); /* Ruta relativa a la ubicación del archivo CSS */
+  background-image: url('../Images//Contact.jpg'); /* Ruta relativa a la ubicación del archivo CSS */
 }
 .thome {
   margin-left: 50%;
@@ -93,6 +97,7 @@
   .page1 {
     height: 655px; 
     margin-bottom: -10px;
+    padding-top: 80px;
   }
   .page2{
     height: 850px;
