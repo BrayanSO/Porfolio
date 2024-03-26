@@ -49,7 +49,7 @@ class App extends React.Component {
     return (
       <div>
         <div className="button-container col-md-12 col-xs-12">
-          <button onClick={() => this.goToPage('home')}>{language === 'es' ? 'Home' : 'Inicio'}</button>
+          <button onClick={() => this.goToPage('home')}>{language === 'es' ? 'Inicio' : 'Home'}</button>
           <button onClick={() => this.goToPage('skills')}>{language === 'es' ? 'Habilidades' : 'Skills'}</button>
           <button onClick={() => this.goToPage('proyects')}>{language === 'es' ? 'Proyectos' : 'Proyects'}</button>
           <button onClick={() => this.goToPage('contact')}>{language === 'es' ? 'Contactame' : 'Contact'}</button>
@@ -57,19 +57,19 @@ class App extends React.Component {
         </div>
         <div className="content">
           <div id="home" className="page1">
-            <h2 className='thome'>{language === 'en' ? 'Home' : 'Inicio'}</h2>
+            <h2 className='thome'>{language === 'es' ? 'Home' : 'Inicio'}</h2>
             <Home language={language}></Home>
           </div>
           <div id="skills" className="page2">
-            <h2 className='tskills'>{language === 'en' ? 'habilidades' : 'skills'}</h2>
+            <h2 className='tskills'>{language === 'es' ? 'habilidades' : 'Skills'}</h2>
             <Skills></Skills>
           </div>
           <div id="proyects" className="page3">
-            <h2 className='tproyects'>{language === 'en' ? 'Proyectos' : 'Proyects'}</h2>
-            <Proyects></Proyects>
+            <h2 className='tproyects'>{language === 'es' ? 'Proyectos' : 'Proyects'}</h2>
+            <Proyects language={language}></Proyects>
           </div>
           <div id="contact" className="page4">
-            <h2 className='tcontact'>{language === 'en' ? 'Contactame' : 'contact'}</h2>
+            <h2 className='tcontact'>{language === 'es' ? 'Contactame' : 'Contact'}</h2>
             <ContactMe></ContactMe>
           </div>
           {/* Nuevo menú móvil */}

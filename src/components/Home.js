@@ -37,8 +37,8 @@ const Home = ({ language }) => {
       </div>
       
       <div>
-        <button onClick={() => goToSection('contact')} className='contact'>  <FontAwesomeIcon icon={faEnvelope} className="icon" /> {language === 'es' ? 'Contact me' : 'Contáctame'}</button>
-        <button onClick={() => goToSection('proyects')} className='Proyect'> <FontAwesomeIcon icon={faFolderOpen} className="icon" /> {language === 'es' ? 'My Project' : 'Mis Proyectos'}</button>
+        <button onClick={() => goToSection('contact')} className='contact'>  <FontAwesomeIcon icon={faEnvelope} className="icon" /> {language === 'en' ? 'Contact me' : 'Contáctame'}</button>
+        <button onClick={() => goToSection('proyects')} className='Proyect'> <FontAwesomeIcon icon={faFolderOpen} className="icon" /> {language === 'en' ? 'My Project' : 'Mis Proyectos'}</button>
       </div>
     </div>
   );
