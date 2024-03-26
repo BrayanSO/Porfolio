@@ -70,7 +70,7 @@ class App extends React.Component {
           </div>
           <div id="contact" className="page4">
             <h2 className='tcontact'>{language === 'es' ? 'Contactame' : 'Contact'}</h2>
-            <ContactMe></ContactMe>
+            <ContactMe language={language}></ContactMe>
           </div>
           {/* Nuevo menú móvil */}
           <MobileMenu goToPage={this.goToPage} language={language} toggleLanguage={this.toggleLanguage} />

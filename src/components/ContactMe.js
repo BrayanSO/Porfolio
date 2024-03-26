@@ -1,41 +1,59 @@
-import React, { useState } from 'react';
 import '../Styles/ContactMe.css'
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import CustomPrompt from "../components/CustomPrompt"
 
-const ContactMe = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+export const ContactMe = () => {
+  const form = useRef();
+  const [messageSent, setMessageSent] = useState(false);
+  const [showPrompt, setShowPrompt] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
-    console.log(formData);
+    setShowPrompt(true); // Mostrar el prompt al intentar enviar el mensaje
   };
+
+  const handleConfirmSend = () => {
+    emailjs
+      .sendForm('service_zvl2b4i', 'template_57n56z6', form.current, {
+        publicKey: 'Wj5HRydXlfZ134oue',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setMessageSent(true); // Set the state to indicate message sent
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+    setShowPrompt(false); // Ocultar el prompt después de enviar el mensaje
+  };
+
+  const handleCancelSend = () => {
+    setShowPrompt(false); // Ocultar el prompt si se cancela el envío del mensaje
+  };
+
 
   return (
     <div className="contact-me-container">
+       {messageSent && <div className="alert">Message sent successfully!</div>}
+      {showPrompt && (
+        <CustomPrompt
+          message="Are you sure you want to send the message?"
+          onConfirm={handleConfirmSend}
+          onCancel={handleCancelSend}
+        />
+      )}
       <div className="contact-form">
         <h2>You can find me</h2>
-        <form onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={sendEmail}>
           <div className="form-group">
             <label htmlFor="name">Your Name:</label>
             <input
               type="text"
               id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
+              name="user_name"
               required
             />
           </div>
@@ -44,20 +62,7 @@ const ContactMe = () => {
             <input
               type="email"
               id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="subject">Your Subject:</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
+              name="user_email"
               required
             />
           </div>
@@ -66,16 +71,15 @@ const ContactMe = () => {
             <textarea
               id="message"
               name="message"
-              value={formData.message}
-              onChange={handleChange}
               required
             />
           </div>
-          <button type="submit">Send</button>
+          <input type="submit" value="Send" />
         </form>
       </div>
       <div className="code-example">
       <div>
+        
      <code>
      def simular_contacto(): <br></br>
     print("Iniciando proceso de contacto...")<br></br>
@@ -89,6 +93,7 @@ const ContactMe = () => {
        </div>
       </div>
     </div>
+    
   );
 };
 
