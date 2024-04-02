@@ -58,6 +58,29 @@
     background-color: #f9f9f9;
     color: black;
   }
+
+  .send {
+    margin-right: 5px;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    background-color: #F0AD4E;
+  }
+  
+  .send:hover {
+    transform: translateY(-3px); 
+    background-color: #337AB7; 
+    color: white; 
+  }
+  .alert {
+    color: greenyellow;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
   
   @media screen and (max-width: 769px) {
       .code-example {
