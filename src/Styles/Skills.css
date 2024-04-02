@@ -5,10 +5,11 @@
   max-width: 800px;
   margin: 50px auto;
   margin-top: 200px;
-  border: 2px solid rgb(0, 0, 0);
-  padding: 2px;
-  border-radius: 10%;
+  border: 1px solid #F0AD4E;
+  padding: 40px;
+  border-radius: 2%;
   background-color: black;
+
 }
 
 .skill {
@@ -28,6 +29,7 @@
 /* Al pasar el cursor sobre la habilidad, se agranda un poco */
 .skill:hover {
   transform: scale(1.1); /* Aumentamos el tamaño al 110% */
+  
 }
 .skill:hover::after {
   content: attr(label); /* Esta línea debe cambiarse a 'content: datalabel;' */
@@ -129,6 +131,7 @@
   .portfolio {
     width: 300px;; /* Muestra el menú superior en pantallas grandes */
     margin-top: 50px;
+    padding: 10px;
   
   }
   
