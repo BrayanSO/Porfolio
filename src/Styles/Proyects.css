@@ -24,6 +24,8 @@ a {
 /* Nuevos estilos para la división de información e imagen */
 .proyect-container {
   display: flex;
+  background-color: transparent;
+  
 }
 
 .proyect-info {
