@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import CustomPrompt from "../components/CustomPrompt"
 import '../Styles/ContactMe.css'
+import Joke from '../components/Joke.js'
+import '../Styles/Joke.css'
 
 export const ContactMe = ({ language }) => {
   const form = useRef();
@@ -79,16 +81,8 @@ export const ContactMe = ({ language }) => {
       </div>
       <div className="code-example">
       <div>
-        
      <code>
-     def simular_contacto(): <br></br>
-    print("Iniciando proceso de contacto...")<br></br>
-    for i in range(3):<br></br>
-        print("...", end=" ")<br></br>
-    print("\n¡Éxito! Han contactado contigo.") <br></br>
-
-      simular_contacto()
-
+     <Joke></Joke>
        </code>
        </div>
       </div>

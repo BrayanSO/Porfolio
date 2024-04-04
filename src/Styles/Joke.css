@@ -1,0 +1,29 @@
+/* Estilos para resaltar sintaxis en código JSX */
+.code-block {
+    background-color: #282c34;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #61dafb;
+  }
+  
+  .code-snippet {
+    color: #f8f8f2;
+    overflow-x: auto; /* Añade scroll horizontal si es necesario */
+  }
+  
+  /* Estilos para resaltar la sintaxis de JSX */
+  .language-jsx .token {
+    color: #f8f8f2;
+  }
+  
+  .language-jsx .token.keyword {
+    color: #ff79c6;
+  }
+  
+  .language-jsx .token.punctuation {
+    color: #f8f8f2;
+  }
+  
+  .language-jsx .token.constant {
+    color: #f92672; /* Color rosa para las constantes */
+  }
