@@ -61,7 +61,7 @@ class App extends React.Component {
             <Home language={language}></Home>
           </div>
           <div id="skills" className="page2">
-            <h2 className='tskills'>{language === 'es' ? 'habilidades' : 'Skills'}</h2>
+            <h2 className='tskills'>{language === 'es' ? 'Habilidades' : 'Skills'}</h2>
             <Skills></Skills>
           </div>
           <div id="proyects" className="page3">
@@ -69,7 +69,7 @@ class App extends React.Component {
             <Proyects language={language}></Proyects>
           </div>
           <div id="contact" className="page4">
-            <h2 className='tcontact'>{language === 'es' ? 'Contactame' : 'Contact'}</h2>
+            <h2 className='tcontact'>{language === 'es' ? 'Contactame' : 'Contact Me'}</h2>
             <ContactMe language={language}></ContactMe>
           </div>
           {/* Nuevo menú móvil */}

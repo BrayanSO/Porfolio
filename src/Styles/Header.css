@@ -62,12 +62,14 @@
 }
 
 .page3 {
-  background-image: url('../Images//Proyects.jpg');  
+/* background-image: url('../Images//Proyects.jpg'); */
+background-color: black; 
   
 }
 
 .page4 {
-  background-image: url('../Images//Contact.jpg'); /* Ruta relativa a la ubicación del archivo CSS */
+ /* background-image: url('../Images//Contact.jpg'); */
+ background-color: black;
 }
 .thome {
   margin-left: 50%;
@@ -79,12 +81,17 @@
   text-align: center;
   margin-top: 200px;
   color: white;
+  animation: lights 5s 750ms linear infinite;
+  font-size: 40px;
 }
+
 
 .tproyects {
   text-align: center;
   padding-top: 200px;
   color: white;
+  animation: lights 5s 750ms linear infinite;
+  font-size: 40px;
 }
 
 .tcontact {
@@ -92,6 +99,8 @@
   text-align: center;
   margin-bottom: 300px;
   margin-top: 200px;
+  animation: lights 5s 750ms linear infinite;
+  font-size: 40px;
 }
 @media screen and (max-width: 769px) {
   .page1 {
