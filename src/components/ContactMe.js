@@ -82,7 +82,7 @@ export const ContactMe = ({ language }) => {
       <div className="code-example">
       <div>
      <code>
-     <Joke></Joke>
+     <Joke language={language} />
        </code>
        </div>
       </div>

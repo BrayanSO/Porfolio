@@ -1,30 +1,51 @@
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'; // Importa un estilo de tu elección
-import '../Styles/Joke.css'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import '../Styles/Joke.css';
 
-
-const codeSnippet = `
-import  { useState } from "react";
+const codeSnippets = {
+  en: `
+import { useState } from "react";
 
 /* <span> let's create something: 
  Something cool and unique </span> */
 
 const [sender, setSender] = "🚀";
 const [recipient, setRecipient] = "📧";
-const [subject, setSubject] = "✨";
 const [message, setMessage] = 
-\`Hello, intrepid traveler! 👋
 
-Across the cosmos, a message for you:
+\`Hello, Future Friend! 👋
+
+I'm excited to explore opportunities with your company.
+
 
 " "
 
-Wishing you stardust dreams,\`;
+Looking forward to discussing further. Best regards,\`;
+`,
+  es: `
+import { useState } from "react";
 
-`;
+/* <span> creemos algo:
+ Algo genial y único </span> */
 
-const JokeComponent = () => {
+const [sender, setSender] = "🚀";
+const [recipient, setRecipient] = "📧";
+const [message, setMessage] = 
+
+\`¡Hola, Futuro Amigo! 👋
+
+Estoy emocionado de explorar oportunidades con su empresa.
+
+" "
+
+Esperamos seguir discutiendo. Atentamente,\`;
+`,
+};
+
+const JokeComponent = ({ language }) => {
+  const codeSnippet = codeSnippets[language] || codeSnippets['en']; // Default to English if language not found
+
   return (
     <div className="code-block">
       <SyntaxHighlighter language="jsx" style={tomorrow}>
