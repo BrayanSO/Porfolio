@@ -32,10 +32,12 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <div className="portfolio">
+    <div className="portfolio"> 
+     <h2 className='title2'>WebDevelopment</h2>
       {skillsData.map((skill, index) => (
         <Skill key={index} icon={skill.icon} label={skill.label} color={skill.color} />
       ))}
+      
     </div>
   );
 };

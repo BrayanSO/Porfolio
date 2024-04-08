@@ -43,7 +43,6 @@
 
 .page1, .page2, .page3, .page4 {
   height: 100vh; 
-  padding: 20px;
   background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
   background-position: center; /* Centra la imagen en el contenedor */
   padding-top: 10px;
@@ -109,10 +108,10 @@ background-color: black;
     padding-top: 80px;
   }
   .page2{
-    height: 850px;
+    height: 1000px;
   }
   .page3{
-    margin-top: 1px;
+    height: 900px;
   }
   .page4{
     margin-top: 0px;
@@ -126,7 +125,7 @@ background-color: black;
 .tcontact {
   color: white;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 80px;
   margin-bottom: 50px;
 }
 

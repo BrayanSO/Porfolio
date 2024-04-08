@@ -61,11 +61,11 @@ class App extends React.Component {
             <Home language={language}></Home>
           </div>
           <div id="skills" className="page2">
-            <h2 className='tskills'>{language === 'es' ? 'Habilidades' : 'Skills'}</h2>
+            <h2 className='tskills'>{language === 'es' ? 'Habilidades ' : '   Skills '}</h2>
             <Skills></Skills>
           </div>
           <div id="proyects" className="page3">
-            <h2 className='tproyects'>{language === 'es' ? 'Proyectos' : 'Proyects'}</h2>
+            <h2 className='tproyects'>{language === 'es' ? 'Mis Proyectos' : ' My Proyects'}</h2>
             <Proyects language={language}></Proyects>
           </div>
           <div id="contact" className="page4">

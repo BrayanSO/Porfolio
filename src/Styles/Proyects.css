@@ -1,8 +1,8 @@
 /* MyCarousel.css */
 .my-carousel {
   border-radius: 20%; /* Bordes redondeados */
-  height: 400px;
-  width: 900px;
+  height: 600px;
+  width: 60%;
   margin-top: 200px;
   margin-bottom: 360px;
   align-items: center;
@@ -13,12 +13,17 @@
 a {
   color: white;
 }
+.icono {
+  height: auto;
+  
+}
 .icono2 {
-  height: 20px;
+  height: 200px;
 }
 .icono-link {
   display: inline-block; /* Para que el enlace ocupe el espacio del contenido */
   margin: 1px; /* Ajusta el margen para aumentar el área clickeable */
+  
 }
 
 /* Nuevos estilos para la división de información e imagen */
@@ -35,7 +40,13 @@ a {
 }
 
 .img1 {
-  max-width: 80%; /* ajusta el tamaño de la imagen según sea necesario */
+ max-width: 60%;
+
+}
+.img2 {
+  max-width: 60%;
+  height: 400px;
+  margin-top: 140px;
 
 }
 
@@ -56,13 +67,21 @@ a {
   .img1 {
     order: 1; /* Cambia el orden para que la imagen aparezca antes del texto */
     margin-bottom: 10px; /* Añade un margen inferior a la imagen */
-    max-width: 99%; 
+    max-width: 100%;
+  }
+  .img2 {
+    max-width: 100%;
+  }
+  
+  .icono-link {
+   height: 160px;
   }
   .my-carousel {
   width: auto;
   height: auto;
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 40px;
   }
   .proyect-info {
     flex: 1;
@@ -70,8 +89,8 @@ a {
     color: white;
     
   }
-  .icono-link {
-    margin: 40px; /* Margen más pequeño para el área clickeable en dispositivos móviles */
+  .icono {
+    height: 205px;
   }
   
 }

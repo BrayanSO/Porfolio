@@ -14,7 +14,7 @@ const Proyects = ({ language }) => {
         <div className="proyect-container">
           <div className="proyect-info">
             <h2>{language === 'en' ? 'Carhalla' : 'Carhalla'}</h2>
-            <p>{language === 'en' ? 'Application for selling cars with premium options, advanced data filtering, vehicle ad posting, and optional chat functionality for user inquiries.' : 'Aplicación de venta de autos con opciones premium, filtrado avanzado de datos, publicación de anuncios de vehículos y funcionalidad de chat opcional para consultas de usuarios.'}</p>
+            <p>{language === 'en' ? 'I developed a web platform for car sales using JavaScript, React, Python, Flux, and API, ensuring an outstanding user experience. I implemented advanced data filters, premium post highlighting options, and a chat function to enhance functionality and user interaction. I achieved optimal performance with fast loading times and high data security.' : 'Desarrollé una plataforma web para la venta de automóviles con JavaScript, React, Python, Flux y API, ofreciendo una experiencia de usuario destacada. Incluí filtros avanzados, resaltado de publicaciones premium y chat para mejorar la funcionalidad y la interacción. Logré un rendimiento óptimo con tiempos de carga rápidos y alta seguridad de datos.'}</p>
             <a href="https://github.com/BrayanSO/Carhalla" target="_blank" rel="noopener noreferrer" className="icono-link">
               <img src={icono2} alt="Icono Personalizado" className="icono" />
             </a>
@@ -24,14 +24,14 @@ const Proyects = ({ language }) => {
         <div className="proyect-container">
           <div className="proyect-info">
             <h2>{language === 'en' ? 'NewCodecr' : 'NewCodecr'}</h2>
-            <p>{language === 'en' ? 'Business personal page to sell the service of creating WordPress websites.' : 'Página personal empresarial para vender el servicio de creación de páginas web en WordPress.'}</p>
+            <p>{language === 'en' ? 'I led the development of NewCodecr, a freelance website offering specialized services in WordPress web development. I used WordPress and PHP to create a range of functionalities, from simple informative sites to complex platforms with integrated SEO, appointment scheduling, blogs, and ads. Implemented strong security measures resulting in a high security rating and safeguarded user data. Ensured responsive design and a seamless user experience, including messaging, contact section, meeting booking, and blog functionality..' : 'Lideré el desarrollo de NewCodecr, una página freelance que ofrece servicios especializados de creación de páginas web en WordPress. Utilicé WordPress y PHP para crear una variedad de funcionalidades, desde sitios informativos simples hasta plataformas complejas con SEO integrado, programación de citas, blogs y anuncios. Implementé medidas de seguridad sólidas, lo que resultó en una alta calificación de seguridad y salvaguardó los datos del usuario. Diseño responsivo garantizado y una experiencia de usuario perfecta, incluidas funciones como mensajería, sección de contacto, reserva de reuniones y blog.'}</p>
             <a href="https://www.NewCodecr.com" target="_blank" rel="noopener noreferrer">
               {language === 'en' ? 'Visit NewCodecr' : 'Visitar NewCodecr'}
               <img src={icono} alt="Icono Personalizado" className="icono" />
             </a>
           </div> 
           
-          <img src={proyecto2} alt="Imagen 2" />
+          <img src={proyecto2} alt="Imagen 2" className='img2' />
         </div>
       </Carousel>
     </div>

@@ -12,6 +12,12 @@
 
 }
 
+.title2 {
+  color: #F0AD4E;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 30px;
+}
 .skill {
   position: relative; /* Establecemos la posición relativa para poder posicionar el cuadro de texto dentro */
   width: 120px;
@@ -65,36 +71,37 @@
 
 
 /* Agregamos bordes de colores correspondientes a los iconos */
+
 .skill:nth-child(1) {
-  border: 2px solid #E44D26; /* HTML5 */
+  border: 2px solid #111111; 
 }
 
 .skill:nth-child(2) {
-  border: 2px solid #264DE4; /* CSS3 */
+  border: 2px solid #F05032; /* HTML5 */
 }
 
 .skill:nth-child(3) {
-  border: 2px solid #F7DF1E; /* JavaScript */
+  border: 2px solid #190ae4;   /* CSS3 */
 }
 
 .skill:nth-child(4) {
-  border: 2px solid #61DAFB; /* React */
+  border: 2px solid #c5c332; /* JavaScript */
 }
 
 .skill:nth-child(5) {
-  border: 2px solid #3776AB; /* Python */
+  border: 2px solid #61DAFB; /* React */
 }
 
 .skill:nth-child(6) {
-  border: 2px solid #68A063; /* Node.js */
+  border: 2px solid #3776AB; /* Python */
 }
 
 .skill:nth-child(7) {
-  border: 2px solid #F05032; /* Git */
+  border: 2px solid #68A063; /* Node.js */  
 }
 
 .skill:nth-child(8) {
-  border: 2px solid #CC6699; /* Sass */
+  border: 2px solid #F05032; /* Git */
 }
 
 .skill:nth-child(9) {
@@ -102,24 +109,13 @@
 }
 
 .skill:nth-child(10) {
-  border: 2px solid #21759B; /* WordPress */
+  border: 2px solid #21759B;  /*SQL */
 }
 
 .skill:nth-child(11) {
-  border: 2px solid #4FC08D; /* Vue.js */
+  border: 2px solid #21759B; /* WordPress */
 }
 
-.skill:nth-child(12) {
-  border: 2px solid #DD0031; /* Angular */
-}
-
-.skill:nth-child(13) {
-  border: 2px solid #8892BF; /* PHP */
-}
-
-.skill:nth-child(14) {
-  border: 2px solid #FF2D20; /* Laravel */
-}
 
 .skill span {
   font-size: 14px;
@@ -132,6 +128,7 @@
     width: 300px;; /* Muestra el menú superior en pantallas grandes */
     margin-top: 50px;
     padding: 10px;
+    margin-bottom: 800px;
   
   }
   
@@ -139,5 +136,11 @@
     margin-top: 20px;
     width: 80px; /* Oculta el menú móvil en pantallas grandes */
     height: 70px;
+  }
+  .title2 {
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 30px;
   }
 }
