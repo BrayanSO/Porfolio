@@ -19,14 +19,6 @@ const Footer = () => {
         <li><a href="/"><IonIcon icon={logoLinkedin} /></a></li>
         <li><a href="/"><IonIcon icon={logoInstagram} /></a></li>
       </ul>
-      
-      <ul className="menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/">About</a></li>
-        <li><a href="/">Services</a></li>
-        <li><a href="/">Team</a></li>
-        <li><a href="/">Contact</a></li>
-      </ul>
       <p>&copy;2024 Brayan Solera | All Rights Reserved</p>
     </footer>
   );
