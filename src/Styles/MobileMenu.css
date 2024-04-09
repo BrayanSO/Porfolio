@@ -13,7 +13,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: 1px solid #ddd; /* Borde superior del menú móvil */
     z-index: 9999;
     margin-right: auto;
     

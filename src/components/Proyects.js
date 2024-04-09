@@ -10,7 +10,7 @@ import icono from '../Images/icono.png';
 const Proyects = ({ language }) => {
   return (
     <div className='page'> 
-      <Carousel showThumbs={false} className="my-carousel" infiniteLoop={true}>
+      <Carousel showThumbs={false} className="my-carousel" >
         <div className="proyect-container">
           <div className="proyect-info">
             <h2>{language === 'en' ? 'Carhalla' : 'Carhalla'}</h2>
