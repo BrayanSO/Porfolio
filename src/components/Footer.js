@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/Footer.css'
 import { IonIcon } from '@ionic/react';
-import { logoFacebook, logoTwitter, logoLinkedin, logoInstagram } from 'ionicons/icons';
+import { logoGithub, logoTwitter, logoLinkedin, mailOutline } from 'ionicons/icons';
 
 
 const Footer = () => {
@@ -14,10 +14,11 @@ const Footer = () => {
         <div className="wave" id="wave4"></div>
       </div>
       <ul className="social_icon">
-        <li><a href="/"><IonIcon icon={logoFacebook} /></a></li>
-        <li><a href="/"><IonIcon icon={logoTwitter} /></a></li>
-        <li><a href="/"><IonIcon icon={logoLinkedin} /></a></li>
-        <li><a href="/"><IonIcon icon={logoInstagram} /></a></li>
+        <li><a href="https://github.com/BrayanSO" target='_blank' rel="noopener noreferrer"><IonIcon icon={logoGithub} /></a></li>
+        <li><a href="https://www.linkedin.com/in/brayanso/" target='_blank' rel="noopener noreferrer"><IonIcon icon={logoLinkedin} /></a></li>
+        <li><a href="mailto:briansolera@gmail.com" target='_blank' rel="noopener noreferrer"><IonIcon icon={mailOutline} /></a></li>
+        <li><a href="https://twitter.com/BrayanSole25744" target='_blank' rel="noopener noreferrer"><IonIcon icon={logoTwitter} /></a></li>
+
       </ul>
       <p>&copy;2024 Brayan Solera | All Rights Reserved</p>
     </footer>

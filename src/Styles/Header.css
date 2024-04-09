@@ -103,7 +103,7 @@ background-color: black;
 }
 @media screen and (max-width: 769px) {
   .page1 {
-    height: 655px; 
+    height: 755px; 
     margin-bottom: -10px;
     padding-top: 80px;
   }
@@ -111,10 +111,11 @@ background-color: black;
     height: 900px;
   }
   .page3{
-    height: 900px;
+    height: 1100px;
   }
   .page4{
     margin-top: 0px;
+    height: 900px;
   }
   .tskills {
     margin-top: 20px;

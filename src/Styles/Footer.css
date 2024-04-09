@@ -24,6 +24,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 footer .social_icon,
@@ -50,7 +51,7 @@ footer .social_icon li a {
 
 footer .social_icon li a:hover {
   transform: translateY(-15px);
-  color: blue;
+  color: black;
 }
 
 footer .menu li a {
