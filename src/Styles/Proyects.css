@@ -10,6 +10,7 @@
   margin-right: auto;
   margin-left: auto;
 }
+
 a {
   color: white;
 }
@@ -55,7 +56,11 @@ a {
   .proyect-container {
     flex-direction: column; /* Cambia la dirección del flexbox a columna */
     text-align: center; /* Centra el texto */
-   
+  }
+  .carousel .carousel-slider .control-dots .dot {
+    width: 8px; /* Ancho reducido de los puntos en móvil */
+    height: 8px; /* Alto reducido de los puntos en móvil */
+    margin: 0 3px; /* Espacio reducido entre los puntos en móvil */
   }
 
   .proyect-info {

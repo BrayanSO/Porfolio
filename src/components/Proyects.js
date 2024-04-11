@@ -7,6 +7,7 @@ import proyecto2 from '../Images/proyecto2.png';
 import icono2 from '../Images/icono2.png';
 import icono from '../Images/icono.png';
 
+
 const Proyects = ({ language }) => {
   return (
     <div className='page'> 
