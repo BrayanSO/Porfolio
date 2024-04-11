@@ -34,7 +34,9 @@ const Proyects = ({ language }) => {
           <img src={proyecto2} alt="Imagen 2" className='img2' />
         </div>
       </Carousel>
+      
     </div>
+    
   );
 };
 
