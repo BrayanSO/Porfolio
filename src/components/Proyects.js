@@ -6,11 +6,17 @@ import proyecto1 from '../Images/proyecto1.png';
 import proyecto2 from '../Images/proyecto2.png';
 import icono2 from '../Images/icono2.png';
 import icono from '../Images/icono.png';
+import  MobileProjects from '../components/MobileProjects.js'
+
 
 
 const Proyects = ({ language }) => {
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
   return (
     <div className='page'> 
+    {isMobile ? ( // Renderiza MobileProjects solo en dispositivos móviles
+        <MobileProjects language={language} />
+      ) : (
       <Carousel showThumbs={false} className="my-carousel" >
         <div className="proyect-container">
           <div className="proyect-info">
@@ -35,7 +41,7 @@ const Proyects = ({ language }) => {
           <img src={proyecto2} alt="Imagen 2" className='img2' />
         </div>
       </Carousel>
-      
+       )}
     </div>
     
   );

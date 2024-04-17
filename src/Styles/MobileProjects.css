@@ -1,0 +1,96 @@
+/* MobileProjects.css */
+@import '@fortawesome/fontawesome-svg-core/styles.css';
+
+.mobile-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+  }
+  
+  .mobile-proyect {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .mobile-proyect2 {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 120px;
+  }
+  
+  .mobile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .mobile-proyect-info {
+    padding: 20px;
+    
+  }
+  
+  .mobile-proyect-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .mobile-proyect-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+    .mobile-proyect {
+      max-width: 100%;
+    }
+  
+    .mobile-img {
+      border-radius: 8px;
+    }
+    h2 {color: white;
+    text-align: center;
+        
+}
+
+.icono {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+.icono2 {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  
+  .technologies span {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .iconogit {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  }
+  
