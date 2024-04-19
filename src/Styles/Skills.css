@@ -5,7 +5,8 @@
   max-width: 800px;
   margin: 50px auto;
   margin-top: 200px;
-  border: 1px solid #F0AD4E;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Borde semi-transparente */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Brillo alrededor del icono */
   padding: 40px;
   border-radius: 2%;
   background-color: black;
@@ -135,7 +136,7 @@
   .skill {
     margin-top: 20px;
     width: 80px; /* Oculta el menú móvil en pantallas grandes */
-    height: 70px;
+    height: 90px;
   }
   .title2 {
     color: white;
@@ -144,3 +145,10 @@
     margin-bottom: 30px;
   }
 }
+
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+  .portfolio {
+    margin-top: 30px;
+  }
+}
+

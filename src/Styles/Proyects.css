@@ -42,17 +42,28 @@ a {
 
 .img1 {
  max-width: 60%;
-
 }
 .img2 {
   max-width: 60%;
-  height: 400px;
+  height: 350px;
   margin-top: 140px;
+  margin-top: 250px;
 
 }
+.icoskill {
+  width: 60px;
+  display: flex ;
+  
+}
+.iconew{
+  width: 80px;
+  height: 80px;
+  display: flex ;
+}
 
-/* Estilos para modo celular */
-@media screen and (max-width: 768px) {
+
+/* Estilos para pantallas más pequeñas, como teléfonos */
+@media screen and (max-width: 767px) {
   .proyect-container {
     flex-direction: column; /* Cambia la dirección del flexbox a columna */
     text-align: center; /* Centra el texto */
@@ -99,9 +110,5 @@ a {
   }
   .icono {
     height: auto;
-
-    
   }
-  
-  
 }

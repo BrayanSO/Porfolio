@@ -31,7 +31,7 @@
 }
 
 /* Estilos para dispositivos con un ancho mínimo de 769px (pantallas grandes) */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .button-container {
     display: flex; /* Muestra el menú superior en pantallas grandes */
   }
@@ -40,8 +40,4 @@
     display: none; /* Oculta el menú móvil en pantallas grandes */
   }
 }
-@media screen and (min-width: 768px) {
-  .mobile-menu {
-    margin-left: 40%;
-  }
-}
+

@@ -77,6 +77,10 @@
     gap: 35px;
     margin-top: 10px;
     justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Borde semi-transparente */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Brillo alrededor del icono */
+    transition: border-color 0.3s ease;
+    padding: 5px;
   }
   
   .technologies span {
@@ -86,10 +90,12 @@
     font-size: 14px;
   }
   .iconogit {
-    height: 100px;
+    height: 150px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
+
+    
   }
   
   }

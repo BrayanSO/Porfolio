@@ -101,33 +101,35 @@ background-color: black;
   animation: lights 5s 750ms linear infinite;
   font-size: 40px;
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   .page1 {
-    height: 755px; 
+    height: 750px; 
     margin-bottom: -10px;
     padding-top: 80px;
   }
   .page2{
     height: 900px;
   }
+  .tskills{
+    margin-top: 80px;
+  }
   .page3{
     height: 1950px;
   }
   .page4{
-    margin-top: 0px;
+    
     height: 800px;
   }
-  .tskills {
-    margin-top: 20px;
-  }
-  .tproyects {
-    padding-top: 20px;
-  }
-.tcontact {
-  color: white;
-  text-align: center;
-  margin-top: 80px;
-  margin-bottom: 50px;
 }
 
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+.tskills {
+    text-align: center;
+    margin-top: 500px;
+    color: white;
+  }
+.page2{
+    height: 1200px;
+  }
 }
