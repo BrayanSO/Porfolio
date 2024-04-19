@@ -126,10 +126,19 @@ background-color: black;
 @media screen and (min-width: 768px) and (max-width: 1366px) {
 .tskills {
     text-align: center;
-    margin-top: 500px;
+    margin-top: 200px;
     color: white;
   }
 .page2{
-    height: 1200px;
+    height: 900px;
+  }
+  .page1{
+    height: 1000px;
+  }
+  .tproyects {
+    text-align: center;
+    margin-bottom: 200px;
+    height: 300px;
+    padding-top: 60px;
   }
 }
