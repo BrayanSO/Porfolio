@@ -118,7 +118,7 @@ background-color: black;
   }
   .page4{
     
-    height: 800px;
+    height: 1000px;
   }
 }
 
@@ -135,10 +135,20 @@ background-color: black;
   .page1{
     height: 1000px;
   }
+  .page3{
+    height: 1000px;
+  }
+  .page4{
+    height: 1000px;
+  }
   .tproyects {
     text-align: center;
     margin-bottom: 200px;
-    height: 300px;
     padding-top: 60px;
   }
-}
+  .tcontact {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    }
+
+  }

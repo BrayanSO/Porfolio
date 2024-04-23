@@ -53,12 +53,16 @@ const Proyects = ({ language }) => {
           <img src={php} alt="React" title="React" className='php' />
           </div>
 
-            <a href="https://www.NewCodecr.com" target="_blank" rel="noopener noreferrer">
+            
+          </div> 
+        <div className='my-carousel2'>
+          <img src={proyecto2} alt="Imagen 2" className='img2' />
+          <a href="https://www.NewCodecr.com" target="_blank" rel="noopener noreferrer">
               <img src={icono} alt="Icono Personalizado" className="icono" />
             </a>
-          </div> 
-          <img src={proyecto2} alt="Imagen 2" className='img2' />
+          </div>
         </div>
+
       </Carousel>
        )}
     </div>
