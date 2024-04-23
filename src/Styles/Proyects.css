@@ -20,16 +20,13 @@
   flex-direction: column;
   margin-bottom: auto;
   margin-top: auto;
-
 }
-
-
 
 a {
   color: white;
 }
 .icono {
-  height: 250px;
+  height: 200px;
   
 }
 .icono2 {
@@ -74,6 +71,7 @@ a {
 .icoskill {
   width: 60px;
   display: flex ;
+  margin-left: 100px;
   
 }
 .iconew{
@@ -136,6 +134,10 @@ a {
   .icono {
     height: 120px;
   }
+  .icoskill {
+    margin-left: 0px;
+    
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1366px) {
 
@@ -148,6 +150,10 @@ a {
   }
   .icono {
     height: 120px;
+  }
+  .icoskill {
+    margin-left: 0px;
     
   }
 }
+
