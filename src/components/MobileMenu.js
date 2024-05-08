@@ -1,23 +1,49 @@
-// MobileMenu.js
 import React from 'react';
 import "../Styles/MobileMenu.css"
 import ToggleButton from '../components/ToogleButton';
 
 const MobileMenu = ({ goToPage, language, toggleLanguage, isMobileMenuVisible }) => {
+    const handleClick = (section) => {
+        goToPage(section);
+        if (window.innerWidth <= 768) {
+        let scrollOffset = 0;
+        switch (section) {
+            case 'home':
+                scrollOffset = 0;
+                break;
+            case 'skills':
+                scrollOffset = 835; // Ejemplo de desplazamiento diferente para 'skills'
+                break;
+            case 'proyects':
+                scrollOffset = 1820; // Ejemplo de desplazamiento diferente para 'proyects'
+                break;
+            case 'contact':
+                scrollOffset = 3870; // Ejemplo de desplazamiento diferente para 'contact'
+                break;
+            default:
+                scrollOffset = 0;
+        }
+        window.scrollTo({
+            top: scrollOffset, // Desplazamiento personalizado para cada sección
+            behavior: 'smooth' // Desplazamiento suave
+        });
+      }
+    };
+
     return (
       <div className={isMobileMenuVisible ? "mobile-menu mobile-menu-visible" : "mobile-menu"}>
         {/* Agrega el ToggleButton al menú móvil */}
         <ToggleButton label={language === 'en' ? 'Esp' : 'Eng'} onChange={toggleLanguage} />
-        <button onClick={() => goToPage('home')}>
+        <button onClick={() => handleClick('home')}>
           {language === 'en' ? '🏠' : '🏠'} {/* Icono de inicio */}
         </button>
-        <button onClick={() => goToPage('skills')}>
+        <button onClick={() => handleClick('skills')}>
           {language === 'en' ? '🚀' : '🚀'} {/* Icono de habilidades */}
         </button>
-        <button onClick={() => goToPage('proyects')}>
+        <button onClick={() => handleClick('proyects')}>
           {language === 'en' ? '💼' : '💼'} {/* Icono de proyectos */}
         </button>
-        <button onClick={() => goToPage('contact')}>
+        <button onClick={() => handleClick('contact')}>
           {language === 'en' ? '✉️' : '✉️'} {/* Icono de contacto */}
         </button>
       </div>
