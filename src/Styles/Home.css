@@ -102,6 +102,7 @@ p {
   }
   
 }
+
 P{
   padding: 20px;
 }
@@ -111,6 +112,7 @@ P{
   margin-bottom: 20px; /* Agrega margen inferior al texto */
   
 }
+
 
 /* Clases de Bootstrap para ajustar márgenes en dispositivos móviles */
 @media (max-width: 767px) {

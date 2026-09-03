@@ -1,7 +1,7 @@
 .homepage-image {
-  border-radius: 50%; /* Hace que la imagen sea circular */
+  border-radius: 20%; /* Hace que la imagen sea circular */
   width: 350px; /* Ajusta el tamaño de la imagen */
-  margin-top: 250px; /* Margen superior por defecto */
+  margin-top: 210px; /* Margen superior por defecto */
   transition: transform 1s ease-out; /* Agrega transición para el cambio de rotación */
 }
 
