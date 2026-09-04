@@ -20,25 +20,25 @@ const Home = ({ language }) => {
         <p>{language === 'en' ? "Hi, I'm Brayan Solera" : '¡Hola! Soy Brayan Solera'}</p>
       </div>
       <div className="homepage-text3">
-        <p>{language === 'en' ? 'Fullstack Developer ' : 'Desarrollador Fullstack '}</p>
+        <p>{language === 'en' ? 'QA Engineer ' : 'Ingeniero de QA'}</p>
       </div>
       <div className="homepage-text4">
         {language === 'en' ? 
           <div>
-            <p>A fullstack developer with the goal of advancing in my career and participating in inspiring projects. Here I showcase my work and my passion for web development.</p>
-            <p>Let's shape digital solutions together and pave the way for the future.</p>
+            <p>QA Engineer with hands-on experience in manual and automated testing (Cypress, Postman), backed by a full-stack development foundation in React and SQL.</p><p> Here I showcase my testing projects and my passion for building reliable software..</p>
+            <p>Let's build reliable, well-tested digital solutions together.</p>
           </div>
           : 
           <div>
-            <p>Un desarrollador fullstack con el objetivo de avanzar en mi carrera y participar en proyectos inspiradores. Aquí muestro mi trabajo y mi pasión por el desarrollo web.</p>
-            <p>Demos forma juntos a las soluciones digitales y allanemos el camino hacia el futuro.</p>
+            <p>Ingeniero de QA con experiencia práctica en pruebas manuales y automatizadas (Cypress, Postman), respaldada por una base en desarrollo full-stack con React y SQL.</p><p>Aquí muestro mis proyectos de testing y mi pasión por construir software confiable.</p>
+            <p>Construyamos juntos soluciones digitales confiables y bien probadas.</p>
           </div>
         }
       </div>
       
       <div>
         <button onClick={() => goToSection('contact')} className='contact'>  <FontAwesomeIcon icon={faEnvelope} className="icon" /> {language === 'en' ? 'Contact me' : 'Contáctame'}</button>
-        <button onClick={() => goToSection('proyects')} className='Proyect'> <FontAwesomeIcon icon={faFolderOpen} className="icon" /> {language === 'en' ? 'My Project' : 'Mis Proyectos'}</button>
+        <button onClick={() => goToSection('proyects')} className='Proyect'> <FontAwesomeIcon icon={faFolderOpen} className="icon" /> {language === 'en' ? 'My Projects' : 'Mis Proyectos'}</button>
       </div>
     </div>
   );

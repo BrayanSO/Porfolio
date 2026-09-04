@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import '../Styles/Proyects.css';
+import '../Styles/Projects.css';
 import proyecto1 from '../Images/proyecto1.png'; 
 import proyecto2 from '../Images/proyecto2.png';
 import icono2 from '../Images/icono2.png';
@@ -18,7 +18,7 @@ import php from '../icons/php.png'
 
 
 
-const Proyects = ({ language }) => {
+const Projects = ({ language }) => {
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
   return (
     <div className='page'> 
@@ -70,4 +70,4 @@ const Proyects = ({ language }) => {
   );
 };
 
-export default Proyects;
+export default Projects;

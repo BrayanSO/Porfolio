@@ -14,8 +14,8 @@ const MobileMenu = ({ goToPage, language, toggleLanguage, isMobileMenuVisible })
             case 'skills':
                 scrollOffset = 835; // Ejemplo de desplazamiento diferente para 'skills'
                 break;
-            case 'proyects':
-                scrollOffset = 1820; // Ejemplo de desplazamiento diferente para 'proyects'
+            case 'Projects':
+                scrollOffset = 1820; // Ejemplo de desplazamiento diferente para 'Projects'
                 break;
             case 'contact':
                 scrollOffset = 3870; // Ejemplo de desplazamiento diferente para 'contact'
@@ -40,7 +40,7 @@ const MobileMenu = ({ goToPage, language, toggleLanguage, isMobileMenuVisible })
         <button onClick={() => handleClick('skills')}>
           {language === 'en' ? '🚀' : '🚀'} {/* Icono de habilidades */}
         </button>
-        <button onClick={() => handleClick('proyects')}>
+        <button onClick={() => handleClick('Projects')}>
           {language === 'en' ? '💼' : '💼'} {/* Icono de proyectos */}
         </button>
         <button onClick={() => handleClick('contact')}>

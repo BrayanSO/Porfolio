@@ -3,7 +3,7 @@ import React from 'react';
 import '../Styles/Header.css';
 import ToggleButton from '../components/ToogleButton';
 import Skills from "../components/Skills";
-import Proyects from './Proyects.js';
+import Projects from './Projects.js';
 import Home from './Home.js';
 import ContactMe from './ContactMe.js';
 import MobileMenu from './MobileMenu.js';
@@ -51,7 +51,7 @@ class App extends React.Component {
         <div className="button-container col-md-12 col-xs-12">
           <button onClick={() => this.goToPage('home')}>{language === 'es' ? 'Inicio' : 'Home'}</button>
           <button onClick={() => this.goToPage('skills')}>{language === 'es' ? 'Habilidades' : 'Skills'}</button>
-          <button onClick={() => this.goToPage('proyects')}>{language === 'es' ? 'Proyectos' : 'Proyects'}</button>
+          <button onClick={() => this.goToPage('Projects')}>{language === 'es' ? 'Proyectos' : 'Projects'}</button>
           <button onClick={() => this.goToPage('contact')}>{language === 'es' ? 'Contactame' : 'Contact'}</button>
           <ToggleButton label={language === 'es' ? 'Eng' : 'Esp'} onChange={this.toggleLanguage} />
         </div>
@@ -64,9 +64,9 @@ class App extends React.Component {
             <h2 className='tskills'>{language === 'es' ? 'Habilidades ' : '   Skills '}</h2>
             <Skills></Skills>
           </div>
-          <div id="proyects" className="page3">
-            <h2 className='tproyects'>{language === 'es' ? 'Mis Proyectos' : ' My Proyects'}</h2>
-            <Proyects language={language}></Proyects>
+          <div id="Projects" className="page3">
+            <h2 className='tProjects'>{language === 'es' ? 'Mis Proyectos' : ' My Projects'}</h2>
+            <Projects language={language}></Projects>
           </div>
           <div id="contact" className="page4">
             <h2 className='tcontact'>{language === 'es' ? 'Contactame' : 'Contact Me'}</h2>
