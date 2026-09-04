@@ -7,39 +7,57 @@ const codeSnippets = {
   en: `
 import { useState } from "react";
 
-/* <span> let's create something: 
- Something cool and unique </span> */
+// console.log("If something looks weird here, I already reported it myself");
 
-const [sender, setSender] = "🚀";
-const [recipient, setRecipient] = "📧";
-const [message, setMessage] = 
-
-\`Hello, Future Friend! 👋
+const [testStatus, setTestStatus] = useState("PASSED ✅");
+const [bugsFound, setBugsFound] = useState(0);
+const [buildStatus, setBuildStatus] = useState("200 OK");
+const [darkMode, setDarkMode] = useState(true);
+const [confidence, setConfidence] = useState("HIGH 🚀");
 
 I'm excited to explore opportunities with your company.
 
+// I use dark mode because light attracts bugs 🐛
 
-" "
+QA Report:
+────────────────────────
+Test status: PASSED ✅
+Bugs found: 0 🐛
+Regression: PASSED 🟢
+Severity: NONE
+Environment: PRODUCTION 🚀
+Confidence: 99.9%
 
-Looking forward to discussing further. Best regards,\`;
+// If something breaks after this...
+// it's probably a feature, not a bug.
+
 `,
   es: `
 import { useState } from "react";
 
-/* <span> creemos algo:
- Algo genial y único </span> */
+// console.log("Si algo se ve raro aquí, ya lo reporté yo mismo");
 
-const [sender, setSender] = "🚀";
-const [recipient, setRecipient] = "📧";
-const [message, setMessage] = 
-
-\`¡Hola, Futuro Amigo! 👋
+const [testStatus, setTestStatus] = useState("PASSED ✅");
+const [bugsFound, setBugsFound] = useState(0);
+const [buildStatus, setBuildStatus] = useState("200 OK");
+const [darkMode, setDarkMode] = useState(true);
+const [confidence, setConfidence] = useState("HIGH 🚀");
 
 Estoy emocionado de explorar oportunidades con su empresa.
 
-" "
+// Uso modo oscuro porque la luz atrae bugs 🐛
+QA Report:
+────────────────────────
+Test status: PASSED ✅
+Bugs found: 0 🐛
+Regression: PASSED 🟢
+Severity: NONE
+Environment: PRODUCTION 🚀
+Confidence: 99.9%
 
-Esperamos seguir discutiendo. Atentamente,\`;
+// Si algo falla después de esto...
+// probablemente sea un feature, no un bug.
+
 `,
 };
 
