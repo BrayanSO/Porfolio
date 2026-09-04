@@ -1,10 +1,10 @@
-.portfolio {
+.portfolio2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 800px;
   margin: 50px auto;
-  margin-top: 150px;
+  margin-top: 100px;
   border: 2px solid rgba(255, 255, 255, 0.5); /* Borde semi-transparente */
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Brillo alrededor del icono */
   padding: 40px;

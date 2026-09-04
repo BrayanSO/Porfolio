@@ -7,6 +7,7 @@ import Projects from './Projects.js';
 import Home from './Home.js';
 import ContactMe from './ContactMe.js';
 import MobileMenu from './MobileMenu.js';
+import Skills2 from './Skills2.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -62,7 +63,9 @@ class App extends React.Component {
           </div>
           <div id="skills" className="page2">
             <h2 className='tskills'>{language === 'es' ? 'Habilidades ' : '   Skills '}</h2>
+            <Skills2></Skills2>
             <Skills></Skills>
+            
           </div>
           <div id="Projects" className="page3">
             <h2 className='tProjects'>{language === 'es' ? 'Mis Proyectos' : ' My Projects'}</h2>
