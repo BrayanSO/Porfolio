@@ -112,6 +112,9 @@ background-color: black;
   }
   .tskills{
     margin-top: 80px;
+    position: relative;
+  top: 40px;
+
   }
   .page3{
     height: 2050px;

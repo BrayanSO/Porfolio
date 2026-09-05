@@ -124,7 +124,7 @@
   margin-left: 5px;
 }
 /* Estilos para dispositivos con un ancho mínimo de 769px (pantallas grandes) */
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   .portfolio {
     width: 300px;; /* Muestra el menú superior en pantallas grandes */
     margin-top: 10px;

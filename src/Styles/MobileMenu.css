@@ -6,7 +6,7 @@
   
   .mobile-menu {
     position: fixed;
-    bottom: 0;
+    top: 20px;
     left: 0;
     right: 0;
     background-color: transparent; /* Color de fondo del menú móvil */
@@ -16,6 +16,7 @@
     align-items: center;
     z-index: 9999;
     margin: auto;
+    
    
   }
   

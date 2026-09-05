@@ -117,7 +117,7 @@ P{
 /* Clases de Bootstrap para ajustar márgenes en dispositivos móviles */
 @media (max-width: 767px) {
   .homepage-image {
-    margin-top: 1px; /* Margen superior reducido en dispositivos móviles */
+    margin-top: 100px; /* Margen superior reducido en dispositivos móviles */
     width: 250px;
     
   }
