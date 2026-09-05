@@ -21,5 +21,25 @@ This is my personal portfolio, built to showcase both sides of my profile: softw
 - **Projects** — Carhalla and NewCodecr, including the testing work done on each
 - **Contact** — direct contact form
 
+## Getting Started
+
+Clone the repo and install dependencies:
+```bash
+git clone https://github.com/BrayanSO/Porfolio.git
+cd Porfolio
+npm install
+```
+
+Run it locally:
+```bash
+npm start
+```
+Opens at http://localhost:3000
+
+Build for production:
+```bash
+npm run build
+```
+
 ---
 Built and maintained by [Brayan Solera Oconitrillo](https://www.linkedin.com/in/brayanso/)
