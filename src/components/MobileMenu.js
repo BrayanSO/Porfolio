@@ -15,7 +15,7 @@ const MobileMenu = ({ goToPage, language, toggleLanguage, isMobileMenuVisible })
                 scrollOffset = 835; // Ejemplo de desplazamiento diferente para 'skills'
                 break;
             case 'Projects':
-                scrollOffset = 1820; // Ejemplo de desplazamiento diferente para 'Projects'
+                scrollOffset = 1720; // Ejemplo de desplazamiento diferente para 'Projects'
                 break;
             case 'contact':
                 scrollOffset = 3870; // Ejemplo de desplazamiento diferente para 'contact'

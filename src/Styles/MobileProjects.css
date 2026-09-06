@@ -23,7 +23,7 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    margin-top: 120px;
+    margin-top: 50px;
   }
   
   .mobile-img {
@@ -43,7 +43,7 @@
   }
   
   .mobile-proyect-info p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
     
   }
@@ -62,7 +62,7 @@
 }
 
 .icono {
-    height: 50px;
+    height: 45px;
     display: flex;
     justify-content: center;
 }
@@ -77,10 +77,10 @@
     gap: 35px;
     margin-top: 10px;
     justify-content: center;
-    border: 2px solid rgba(255, 255, 255, 0.5); /* Borde semi-transparente */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Brillo alrededor del icono */
+    border: 2px solid rgba(10, 10, 10, 0.5); /* Borde semi-transparente */
+    box-shadow: 0 0 10px rgba(3, 3, 3, 0.5); /* Brillo alrededor del icono */
     transition: border-color 0.3s ease;
-    padding: 5px;
+    padding: 15px;
   }
   
   .technologies span {
@@ -90,7 +90,7 @@
     font-size: 14px;
   }
   .iconogit {
-    height: 150px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;    

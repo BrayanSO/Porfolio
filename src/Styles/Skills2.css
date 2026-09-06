@@ -19,7 +19,7 @@
   margin-right: 30%;
   margin-bottom: 30px;
 }
-.skill {
+.skill2 {
   position: relative; /* Establecemos la posición relativa para poder posicionar el cuadro de texto dentro */
   width: 120px;
   height: 120px;
@@ -34,11 +34,11 @@
 }
 
 /* Al pasar el cursor sobre la habilidad, se agranda un poco */
-.skill:hover {
+.skill2:hover {
   transform: scale(1.1); /* Aumentamos el tamaño al 110% */
   
 }
-.skill:hover::after {
+.skill2:hover::after {
   content: attr(label); /* Esta línea debe cambiarse a 'content: datalabel;' */
   position: absolute;
   background: black;
@@ -54,7 +54,7 @@
 
 
 /* Ocultamos el cuadro de texto por defecto */
-.skill::after {
+.skill2::after {
   content: " "; /* Agregamos un espacio en blanco */
   position: absolute;
   background: black;
@@ -68,75 +68,30 @@
   transition: opacity 0.3s; /* Agregamos una transición suave */
 }
 
-
-
-
-/* Agregamos bordes de colores correspondientes a los iconos */
-
-.skill:nth-child(1) {
-  border: 2px solid #111111; 
-}
-
-.skill:nth-child(2) {
-  border: 2px solid #F05032; /* HTML5 */
-}
-
-.skill:nth-child(3) {
-  border: 2px solid #190ae4;   /* CSS3 */
-}
-
-.skill:nth-child(4) {
-  border: 2px solid #c5c332; /* JavaScript */
-}
-
-.skill:nth-child(5) {
-  border: 2px solid #61DAFB; /* React */
-}
-
-.skill:nth-child(6) {
-  border: 2px solid #3776AB; /* Python */
-}
-
-.skill:nth-child(7) {
-  border: 2px solid #68A063; /* Node.js */  
-}
-
-.skill:nth-child(8) {
-  border: 2px solid #F05032; /* Git */
-}
-
-.skill:nth-child(9) {
-  border: 2px solid #563D7C; /* Bootstrap */
-}
-
-.skill:nth-child(10) {
-  border: 2px solid #21759B;  /*SQL */
-}
-
-.skill:nth-child(11) {
-  border: 2px solid #21759B; /* WordPress */
-}
-
-
-.skill span {
+.skill2 span {
   font-size: 14px;
   text-align: center;
   margin-left: 5px;
 }
 /* Estilos para dispositivos con un ancho mínimo de 769px (pantallas grandes) */
 @media screen and (max-width: 769px) {
-  .portfolio {
+  .portfolio2 {
     width: 300px;; /* Muestra el menú superior en pantallas grandes */
-    margin-top: 10px;
+    margin-top: 60px;
     padding: 10px;
-    margin-bottom: 800px;
-  
+    padding-top: 10px !important;
+    border: 2px solid rgba(17, 17, 17, 0.5); /* Borde semi-transparente */
+    box-shadow: 0 0 10px rgba(8, 8, 8, 0.5); /* Brillo alrededor del icono */
   }
   
-  .skill {
+  .skill2 {
     margin-top: 20px;
     width: 80px; /* Oculta el menú móvil en pantallas grandes */
     height: 90px;
+  }
+  .skill2 svg {
+    width: 50px !important;
+    height: 45px !important;
   }
   .title2 {
     color: white;
@@ -144,7 +99,8 @@
     margin-right: 10%;
     margin-bottom: 5px;
   }
-}
+  }
+
 
 @media screen and (min-width: 769px) and (max-width: 1366px) {
   .portfolio {

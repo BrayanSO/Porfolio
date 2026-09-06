@@ -18,8 +18,8 @@ const Skills2 = () => {
   return (
     <div className="portfolio2"> 
       <h2 className='title2'>QA & Testing</h2>
-      {skillsData.map((skill, index) => (
-        <Skill key={index} icon={skill.icon} label={skill.label} color={skill.color} />
+      {skillsData.map((skill2, index) => (
+        <Skill key={index} icon={skill2.icon} label={skill2.label} color={skill2.color} />
       ))}
     </div>
   );
@@ -27,7 +27,7 @@ const Skills2 = () => {
 
 const Skill = ({ icon, label, color }) => {
   return (
-    <div className="skill" style={{ color }}>
+    <div className="skill2" style={{ color }}>
       <img src={icon} alt={label} width={80} height={80} />
       <span>{label}</span>
     </div>

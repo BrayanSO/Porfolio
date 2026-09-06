@@ -126,10 +126,11 @@
 /* Estilos para dispositivos con un ancho mínimo de 769px (pantallas grandes) */
 @media screen and (max-width: 768px) {
   .portfolio {
-    width: 300px;; /* Muestra el menú superior en pantallas grandes */
-    margin-top: 10px;
+    width: 400px;; /* Muestra el menú superior en pantallas grandes */
+    margin-top: -45px;
     padding: 10px;
-    margin-bottom: 800px;
+    border: 2px solid rgba(2, 2, 2, 0.5); /* Borde semi-transparente */
+    box-shadow: 0 0 10px rgb(3, 3, 3); /* Brillo alrededor del icono */
   
   }
   
@@ -138,11 +139,17 @@
     width: 80px; /* Oculta el menú móvil en pantallas grandes */
     height: 90px;
   }
+  
+  .skill svg {
+    width: 45px !important;
+    height: 45px !important;
+  }
   .title2 {
     color: white;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 5px;
+    margin-top: -25px;
   }
 }
 
