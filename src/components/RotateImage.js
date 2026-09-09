@@ -13,8 +13,8 @@ const RotateImage = ({ imageUrl }) => {
   };
   const handleMove = (clientX) => {
     const deltaX = clientX - startX;
-    const maxDeltaX = 300; // cambiar la sensibilidad al movimiento, maximo
-    const maxRotation = 60; // cambiar la velocidad máxima de rotación , Maximo 200
+    const maxDeltaX = 0; // cambiar la sensibilidad al movimiento, maximo
+    const maxRotation = 0; // cambiar la velocidad máxima de rotación , Maximo 200
   
     // Calcula la velocidad de rotación basada en la distancia recorrida
     const speed = Math.abs(deltaX) / maxDeltaX * maxRotation;
@@ -25,14 +25,14 @@ const RotateImage = ({ imageUrl }) => {
   
     // Aplica la velocidad como una clase CSS al elemento de imagen
     const rotationClass = adjustedSpeed > 0 ? 'coin-rotation' : '';
-    imageRef.current.className = `homepage-image ${rotationClass} ${adjustedSpeed > 50 ? 'fast' : ''} ${adjustedSpeed > 100 ? 'faster' : ''}`;
+    imageRef.current.className = `homepage-image ${rotationClass} ${adjustedSpeed > 0 ? 'fast' : ''} ${adjustedSpeed > 50 ? 'faster' : ''}`;
   
     // Aplica la rotación considerando la dirección del movimiento
     const direction = deltaX > 0 ? 1 : -1;
     const newRotation = startRotation + (direction * adjustedSpeed);
   
     // Limita la rotación al rango de -180 a 180 grados
-    const clampedRotation = newRotation % 360;
+    const clampedRotation = newRotation % 0;
     setRotation(clampedRotation);
   };
   

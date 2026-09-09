@@ -9,6 +9,7 @@
   display: flex;
   margin-right: auto;
   margin-left: auto;
+ 
 }
 
 .my-carousel2 {
@@ -20,6 +21,41 @@
   flex-direction: column;
   margin-bottom: auto;
   margin-top: auto;
+}
+.custom-carousel-controls{
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+  margin-top: 20px;
+
+  .custom-carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 20px;
+}
+
+.carousel-custom-btn {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: #222;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
+}
+
+.carousel-custom-btn:hover {
+  transform: scale(1.1);
+  background: #444;
+}
 }
 
 a {
@@ -91,6 +127,9 @@ a {
     flex-direction: column; /* Cambia la dirección del flexbox a columna */
     text-align: center; /* Centra el texto */
   }
+  .custom-carousel-controls {
+    display: none !important;    }
+
   .carousel .carousel-slider .control-dots .dot {
     width: 8px; /* Ancho reducido de los puntos en móvil */
     height: 8px; /* Alto reducido de los puntos en móvil */

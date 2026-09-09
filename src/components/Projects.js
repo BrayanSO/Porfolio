@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../Styles/Projects.css';
@@ -18,15 +18,48 @@ import php from '../icons/php.png'
 
 
 
+
 const Projects = ({ language }) => {
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
+   // Referencia para controlar el carrusel manualmente
+  const carouselRef = useRef(null);
+
+  // Funciones controladoras de las flechas personalizadas
+  const handlePrev = () => {
+    if (carouselRef.current) {
+      carouselRef.current.onClickPrev();
+    }
+  };
+
+  const handleNext = () => {
+    if (carouselRef.current) {
+      carouselRef.current.onClickNext();
+    }
+  };
   return (
     <div className='page'> 
+     {/* NUEVOS BOTONES DE REGRESAR Y SIGUIENTE */}
+        <div className="custom-carousel-controls">
+          <button onClick={handlePrev} className="carousel-custom-btn prev-btn">
+            {language === 'en' ? '' : ''}
+             ←
+          </button>
+          <button onClick={handleNext} className="carousel-custom-btn next-btn">
+            {language === 'en' ? '' : ''}
+             →
+          </button>
+        </div>
     {isMobile ? ( // Renderiza MobileProjects solo en dispositivos móviles
         <MobileProjects language={language} />
       ) : (
-      <Carousel showThumbs={false} className="my-carousel" >
+      <Carousel  ref={carouselRef} 
+          showThumbs={false} 
+          showArrows={false}
+          infiniteLoop={true}  className="my-carousel" >
+         
+         
         <div className="proyect-container">
+          
           <div className="proyect-info">
             <h2>{language === 'en' ? 'Carhalla' : 'Carhalla'}</h2>
             <p>{language === 'en' ? 'I developed a web platform for car sales using JavaScript, React, Python, Flux, and API, ensuring an outstanding user experience. I implemented advanced data filters, premium post highlighting options, and a chat function to enhance functionality and user interaction. I achieved optimal performance with fast loading times and high data security. I also designed and executed manual test cases for the authentication and filtering flows, and performed API testing with Postman to validate the apps functionality. ' : 'Desarrollé una plataforma web de venta de autos usando JavaScript, React, Python, Flux y APIs, asegurando una experiencia de usuario excepcional. Implementé filtros de datos avanzados, opciones de destacado premium para publicaciones y una función de chat para mejorar la funcionalidad y la interacción del usuario. Logré un rendimiento óptimo con tiempos de carga rápidos y alta seguridad de datos. También diseñé y ejecuté casos de prueba manuales para los flujos de autenticación y filtrado, y realicé pruebas de API con Postman para validar el funcionamiento de la aplicación.'}</p>

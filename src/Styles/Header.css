@@ -69,6 +69,7 @@ background-color: black;
 .page4 {
  /* background-image: url('../Images//Contact.jpg'); */
  background-color: black;
+  height: 110vh !important; /* Ajusta la altura según tus necesidades */
 }
 .thome {
   margin-left: 50%;
@@ -150,7 +151,7 @@ background-color: black;
     height: 1000px;
   }
   .page4{
-    height: 1000px;
+    height: 300px;
   }
   .tProjects {
     text-align: center;
