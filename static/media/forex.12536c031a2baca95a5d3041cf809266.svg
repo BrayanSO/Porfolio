@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <rect width="640" height="400" rx="16" fill="#111"/>
+  <text x="32" y="44" fill="#fff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Result per trade after costs (R)</text>
+  <text x="32" y="68" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="13">Validation period 2025–2026 · real tick data · real spread</text>
+  <line x1="420" y1="88" x2="420" y2="372" stroke="#666" stroke-width="1.5"/>
+  <text x="420" y="390" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">0</text>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#d0d0d0">
+    <text x="32" y="112">EMA20 + stochastic ("90% win rate")</text>
+    <rect x="291" y="99" width="129" height="18" fill="#e5534b"/>
+    <text x="32" y="148">Bollinger + MA9 ("$1k → $50k")</text>
+    <rect x="311" y="135" width="109" height="18" fill="#e5534b"/>
+    <text x="32" y="184">Supply &amp; demand zones</text>
+    <rect x="329" y="171" width="91" height="18" fill="#e5534b"/>
+    <text x="32" y="220">Machine learning (LightGBM)</text>
+    <rect x="359" y="207" width="61" height="18" fill="#e5534b"/>
+    <text x="32" y="256">MACD + 200 EMA ("87% win rate")</text>
+    <rect x="397" y="243" width="23" height="18" fill="#e5534b"/>
+    <text x="32" y="292">Opening Range Breakout</text>
+    <rect x="420" y="279" width="5" height="18" fill="#8b949e"/>
+    <text x="32" y="328">Most-viewed YouTube strategy</text>
+    <rect x="420" y="315" width="8" height="18" fill="#8b949e"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="12" fill="#fff">
+    <text x="284" y="112" text-anchor="end">−0.17</text>
+    <text x="304" y="148" text-anchor="end">−0.14</text>
+    <text x="322" y="184" text-anchor="end">−0.12</text>
+    <text x="352" y="220" text-anchor="end">−0.08</text>
+    <text x="390" y="256" text-anchor="end">−0.03</text>
+    <text x="432" y="292">+0.01 (t 0.4)</text>
+    <text x="435" y="328">+0.01 (t 0.3)</text>
+  </g>
+  <text x="32" y="360" fill="#61dafb" font-family="Arial, sans-serif" font-size="14" font-weight="bold">30+ strategies tested · none beat the broker's costs</text>
+</svg>
