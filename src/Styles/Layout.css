@@ -1,0 +1,90 @@
+/* Layout.css — se carga después de los estilos de cada sección.
+   Las secciones tenían alturas fijas (100vh, 850px, 1000px...) y su contenido se montaba sobre la sección siguiente
+   según el tamaño de pantalla. Ahora cada sección crece con su contenido y mide al menos una pantalla. */
+
+.page1,
+.page2,
+.page3,
+.page4 {
+  height: auto !important;
+  min-height: 100vh;
+}
+
+/* El carrusel de proyectos tenía una altura fija menor que sus tarjetas */
+.my-carousel {
+  height: auto !important;
+  margin-bottom: 80px !important;   /* antes 360px: dejaba un hueco grande antes de la sección siguiente */
+}
+
+/* En pantallas de 769 a 1366 px el bloque de Inicio tenía height: 100px y su contenido mide mucho más */
+.homepage {
+  height: auto !important;
+  padding-bottom: 60px;
+}
+
+/* El fondo de la página era transparente (el navegador lo pinta BLANCO): cualquier hueco entre secciones
+   aparecía como una raya blanca según el tamaño de pantalla. Fondo negro igual al de las secciones. */
+html,
+body,
+#root {
+  background-color: black;
+}
+
+/* En móvil el bloque de habilidades mide 400px fijos: en teléfonos de menos de 400px se salía por la derecha
+   y generaba desplazamiento lateral. Nunca más ancho que la pantalla. */
+@media screen and (max-width: 768px) {
+  .portfolio {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Tablets y laptops (768–1366px): el carrusel ocupaba el 60% del ancho y el texto quedaba en una columna de ~240px,
+   muy alta y con ~400px vacíos encima. Aquí cada proyecto se apila: imagen arriba, texto a todo el ancho. */
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  .tProjects {
+    margin-bottom: 40px !important;
+  }
+  .my-carousel {
+    width: min(90%, 1000px) !important;
+    margin-top: 30px !important;
+  }
+  .proyect-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img1 {
+    order: 1;
+    max-width: min(80%, 640px);
+    max-height: none;
+    height: auto !important;
+    margin-top: 20px;
+  }
+  .my-carousel2 {
+    order: 1;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  .proyect-info {
+    order: 2;
+    padding: 20px 40px;
+  }
+  .icoskill,
+  .iconew {
+    justify-content: center;
+    gap: 12px;
+    width: auto;
+    height: auto;
+  }
+  /* el carrusel pone width:100% a todas sus imágenes; los íconos conservan su tamaño */
+  .icoskill img,
+  .iconew img {
+    width: 50px !important;
+    height: 50px;
+    flex: none;
+  }
+  .wordpress {
+    margin-left: 0;
+  }
+}

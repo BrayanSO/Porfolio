@@ -118,7 +118,8 @@ background-color: black;
 
   }
   .page3{
-    height: 1850px;
+    height: auto;
+    min-height: 1850px;
   }
   .page4{
     

@@ -2,6 +2,7 @@ import React from 'react';
 import '../Styles/MobileProjects.css';
 import proyecto1 from '../Images/proyecto1.png'; 
 import proyecto2 from '../Images/proyecto2.png';
+import forex from '../Images/forex.svg';
 import icono2 from '../Images/icono2.png';
 import icono from '../Images/icono.png';
 import ReactIcon from '../icons/ReactIcon.png';
@@ -18,6 +19,22 @@ const MobileProjects = ({ language }) => {
   return (
     <div className='mobile-projects'>
       <div className="mobile-proyect">
+        <h2>{language === 'en' ? 'Forex ML Validation Lab' : 'Laboratorio Forex ML'}</h2>
+        <img src={forex} alt="Forex ML Validation Lab results" className='mobile-img' />
+        <div className="mobile-proyect-info">
+          <p>{language === 'en' ? "Tested 30+ trading strategies against 347M real market ticks. I designed the validation method, directed an AI coding agent (Claude Code) to build it in Python and verified every result, catching 3 bugs that faked profits. Documented in my writing samples." : "Probé más de 30 estrategias de trading con 347 millones de ticks reales. Diseñé el método de validación, dirigí a un agente de IA (Claude Code) para construirlo en Python y verifiqué cada resultado, encontrando 3 errores que fingían ganancias. Documentado en mis muestras de redacción."}</p>
+          <div className="technologies">
+          <img src={python_icon} alt="Python" title="Python" className='icono' />
+          <img src={sql_servericon} alt="SQL" title="SQL" className='icono' />
+          <img src="https://cdn.simpleicons.org/pandas/FFFFFF" alt="pandas" title="pandas" className='icono' />
+          <img src="https://cdn.simpleicons.org/streamlit/FF4B4B" alt="Streamlit" title="Streamlit" className='icono' />
+          </div>
+        </div>
+      </div>
+      <a href="https://github.com/BrayanSO/Forex-ML-System/tree/validacion-estrategias" target="_blank" rel="noopener noreferrer" className="icono-link">
+      <img src={icono2} alt="GitHub" className="iconogit" /> </a>
+
+      <div className="mobile-proyect2">
         <h2>{language === 'en' ? 'Carhalla' : 'Carhalla'}</h2>
         <img src={proyecto1} alt="Imagen 1" className='mobile-img' />
         <div className="mobile-proyect-info">

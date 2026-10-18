@@ -4,6 +4,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../Styles/Projects.css';
 import proyecto1 from '../Images/proyecto1.png'; 
 import proyecto2 from '../Images/proyecto2.png';
+import forex from '../Images/forex.svg';
 import icono2 from '../Images/icono2.png';
 import icono from '../Images/icono.png';
 import  MobileProjects from '../components/MobileProjects.js'
@@ -58,6 +59,23 @@ const Projects = ({ language }) => {
           infiniteLoop={true}  className="my-carousel" >
          
          
+        <div className="proyect-container">
+          <div className="proyect-info">
+            <h2>{language === 'en' ? 'Forex ML Validation Lab' : 'Laboratorio de validación Forex ML'}</h2>
+            <p>{language === 'en' ? "Tested 30+ trading strategies (machine learning, technical analysis and popular YouTube methods) against 347M real market ticks. I designed the validation method, directed an AI coding agent (Claude Code) to build it in Python, and verified every result, catching three bugs that made losing strategies look profitable. Includes paper and demo trading bots, a risk manager and 86 unit tests. Documented in my writing samples." : "Probé más de 30 estrategias de trading (machine learning, análisis técnico y métodos populares de YouTube) con 347 millones de ticks reales. Diseñé el método de validación, dirigí a un agente de IA (Claude Code) para construirlo en Python y verifiqué cada resultado, encontrando tres errores que hacían parecer rentables estrategias perdedoras. Incluye bots de paper y demo, gestor de riesgo y 86 pruebas unitarias. Documentado en mis muestras de redacción."}</p>
+            <div className='icoskill'>
+            <img src={python_icon} alt="Python" title="Python" className='python' />
+            <img src={sql_servericon} alt="SQL" title="SQL" className='sql' />
+            <img src="https://cdn.simpleicons.org/pandas/FFFFFF" alt="pandas" title="pandas" className='postman' />
+            <img src="https://cdn.simpleicons.org/streamlit/FF4B4B" alt="Streamlit" title="Streamlit" className='postman' />
+            <img src="https://cdn.simpleicons.org/anthropic/FFFFFF" alt="Claude Code" title="Claude Code" className='postman' />
+            </div>
+            <a href="https://github.com/BrayanSO/Forex-ML-System/tree/validacion-estrategias" target="_blank" rel="noopener noreferrer" className="icono-link">
+              <img src={icono2} alt="GitHub" className="icono" />
+            </a>
+          </div>
+          <img src={forex} alt="Forex ML Validation Lab results" className='img1' />
+        </div>
         <div className="proyect-container">
           
           <div className="proyect-info">

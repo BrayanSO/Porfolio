@@ -6,23 +6,9 @@ const MobileMenu = ({ goToPage, language, toggleLanguage, isMobileMenuVisible })
     const handleClick = (section) => {
         goToPage(section);
         if (window.innerWidth <= 768) {
-        let scrollOffset = 0;
-        switch (section) {
-            case 'home':
-                scrollOffset = 0;
-                break;
-            case 'skills':
-                scrollOffset = 835; // Ejemplo de desplazamiento diferente para 'skills'
-                break;
-            case 'Projects':
-                scrollOffset = 1720; // Ejemplo de desplazamiento diferente para 'Projects'
-                break;
-            case 'contact':
-                scrollOffset = 3870; // Ejemplo de desplazamiento diferente para 'contact'
-                break;
-            default:
-                scrollOffset = 0;
-        }
+        // Posición real de la sección (funciona aunque cambie la altura del contenido)
+        const el = document.getElementById(section);
+        const scrollOffset = section === 'home' || !el ? 0 : el.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
             top: scrollOffset, // Desplazamiento personalizado para cada sección
             behavior: 'smooth' // Desplazamiento suave
@@ -42,6 +28,9 @@ const MobileMenu = ({ goToPage, language, toggleLanguage, isMobileMenuVisible })
         </button>
         <button onClick={() => handleClick('Projects')}>
           {language === 'en' ? '💼' : '💼'} {/* Icono de proyectos */}
+        </button>
+        <button onClick={() => handleClick('writing')}>
+          ✍️ {/* Icono de redacción técnica */}
         </button>
         <button onClick={() => handleClick('contact')}>
           {language === 'en' ? '✉️' : '✉️'} {/* Icono de contacto */}
