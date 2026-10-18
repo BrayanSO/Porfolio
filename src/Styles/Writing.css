@@ -34,6 +34,12 @@
   gap: 24px;
 }
 
+/* La pieza más relevante para el puesto ocupa todo el ancho y se destaca */
+.writing .writing-card-featured {
+  grid-column: 1 / -1;
+  border-color: #F0AD4E;
+}
+
 .writing-card {
   text-align: left;
   border: 1px solid #333;
