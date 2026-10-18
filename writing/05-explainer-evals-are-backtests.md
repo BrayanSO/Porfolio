@@ -7,7 +7,7 @@
 |---|---|
 | **Context / goal** | Show AI builders that the failure modes of a trading backtest are the same ones that inflate agent evals, using real bugs as evidence. |
 | **The problem** | An eval is a measurement, and measurements fail quietly. A harness that drops errors, counts correlated attempts as independent, or breaks on one slice of tasks can turn a weak agent into a strong one on paper. |
-| **My role / process** | I spent months validating 30+ trading strategies on 347M real market ticks and found three bugs that each produced a convincing fake result. I mapped each one to its equivalent in agent evaluation and wrote the checks that would have caught it. |
+| **My role / process** | I validated 30+ trading strategies on 347M real market ticks and found three bugs that each produced a convincing fake result. I mapped each one to its equivalent in agent evaluation and wrote the checks that would have caught it. |
 | **Result** | A practical checklist and a short Python snippet any eval team can apply before trusting a score. |
 
 ---
