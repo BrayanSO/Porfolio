@@ -88,3 +88,44 @@ body,
     margin-left: 0;
   }
 }
+
+/* Menú inferior en móvil: era transparente y sus íconos quedaban encima de los botones de Inicio.
+   Ahora tiene fondo oscuro, y el botón de idioma no se encoge (el texto "Esp/Eng" se salía). */
+@media screen and (max-width: 768px) {
+  .mobile-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-top: 1px solid #222;
+    padding: 6px 10px;
+  }
+  .mobile-menu .toggle-button {
+    flex: none;
+  }
+  /* los 5 íconos se reparten el espacio restante (antes medían ~60px y el último quedaba fuera) */
+  .mobile-menu button {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 8px 0;
+  }
+  /* espacio para que el menú fijo no tape el final de la página */
+  body {
+    padding-bottom: 64px;
+  }
+  /* la primera pantalla (foto, título y botones) cabe encima del menú */
+  .homepage-image {
+    margin-top: 40px;
+    width: auto;
+    max-width: 250px;
+    max-height: 40vh;
+  }
+}
+
+/* Teléfonos de poca altura (p. ej. 320x568): foto más chica para que los botones no queden bajo el menú */
+@media screen and (max-width: 768px) and (max-height: 640px) {
+  .page1 {
+    padding-top: 10px !important;
+  }
+  .homepage-image {
+    margin-top: 20px;
+    max-height: 30vh;
+  }
+}
