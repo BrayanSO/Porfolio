@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../Styles/Projects.css';
@@ -27,40 +27,32 @@ const Projects = ({ language }) => {
     mq.addEventListener('change', onChange);
     return () => mq.removeEventListener('change', onChange);
   }, []);
-   // Referencia para controlar el carrusel manualmente
-  const carouselRef = useRef(null);
-
-  // Funciones controladoras de las flechas personalizadas
-  const handlePrev = () => {
-    if (carouselRef.current) {
-      carouselRef.current.onClickPrev();
-    }
-  };
-
-  const handleNext = () => {
-    if (carouselRef.current) {
-      carouselRef.current.onClickNext();
-    }
-  };
+  // Barra con los nombres: el carrusel muestra el proyecto elegido aquí
+  const names = ['Forex ML Lab', 'Autos360', 'NewCodecr'];
+  const [current, setCurrent] = useState(0);
+  const go = (i) => setCurrent((i + names.length) % names.length);
   return (
     <div className='page'> 
-     {/* NUEVOS BOTONES DE REGRESAR Y SIGUIENTE (solo con el carrusel) */}
-        {!isMobile && <div className="custom-carousel-controls">
-          <button onClick={handlePrev} className="carousel-custom-btn prev-btn">
-            {language === 'en' ? '' : ''}
-             ←
-          </button>
-          <button onClick={handleNext} className="carousel-custom-btn next-btn">
-            {language === 'en' ? '' : ''}
-             →
-          </button>
-        </div>}
+        {!isMobile && <nav className="project-bar" aria-label={language === 'en' ? 'Projects' : 'Proyectos'}>
+          <button onClick={() => go(current - 1)} className="project-arrow" aria-label={language === 'en' ? 'Previous project' : 'Proyecto anterior'}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg></button>
+          {names.map((name, i) => (
+            <button key={name} onClick={() => go(i)} className={'project-tab' + (i === current ? ' active' : '')} aria-current={i === current ? 'true' : undefined}>
+              {name}
+            </button>
+          ))}
+          <button onClick={() => go(current + 1)} className="project-arrow" aria-label={language === 'en' ? 'Next project' : 'Proyecto siguiente'}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg></button>
+        </nav>}
     {isMobile ? ( // Renderiza MobileProjects solo en dispositivos móviles
         <MobileProjects language={language} />
       ) : (
-      <Carousel  ref={carouselRef} 
-          showThumbs={false} 
+      <Carousel
+          selectedItem={current}
+          onChange={setCurrent}
+          showThumbs={false}
           showArrows={false}
+          showIndicators={false}
+          showStatus={false}
+          useKeyboardArrows={true}
           infiniteLoop={true}  className="my-carousel" >
          
          

@@ -22,40 +22,69 @@
   margin-bottom: auto;
   margin-top: auto;
 }
-.custom-carousel-controls{
-  display: flex;
-  justify-content: center; /* centra horizontalmente */
-  align-items: center;     /* centra verticalmente */
-  margin-top: 20px;
-
-  .custom-carousel-controls {
+/* Barra de proyectos: nombres + flechas */
+.project-bar {
   display: flex;
   justify-content: center;
-  gap: 35px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: 20px;
 }
 
-.carousel-custom-btn {
-  width: 45px;
-  height: 45px;
+.project-tab {
+  background: none;
   border: none;
-  border-radius: 50%;
-  background: #222;
-  color: white;
-  font-size: 24px;
+  border-bottom: 2px solid transparent;
+  color: #9a9a9a;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 14px;
   cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
 
+.project-tab:hover { color: #fff; }
+
+.project-tab.active {
+  color: #F0AD4E;
+  border-bottom-color: #F0AD4E;
+}
+
+.project-arrow {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #F0AD4E;
+  border-radius: 50%;
+  background: transparent;
+  color: #F0AD4E;
+  padding: 0; /* el estilo global de button en ContactMe.css agrega padding */
   display: flex;
   align-items: center;
   justify-content: center;
-
-  transition: all 0.2s ease;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.carousel-custom-btn:hover {
-  transform: scale(1.1);
-  background: #444;
+.project-arrow svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
+
+.project-arrow:hover {
+  background: #F0AD4E;
+  color: #000;
+}
+
+.project-tab:focus-visible,
+.project-arrow:focus-visible {
+  outline: 2px solid #F0AD4E;
+  outline-offset: 3px;
 }
 
 a {
@@ -127,7 +156,7 @@ a {
     flex-direction: column; /* Cambia la dirección del flexbox a columna */
     text-align: center; /* Centra el texto */
   }
-  .custom-carousel-controls {
+  .project-bar {
     display: none !important;    }
 
   .carousel .carousel-slider .control-dots .dot {
