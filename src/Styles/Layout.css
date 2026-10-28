@@ -89,6 +89,78 @@ body,
   }
 }
 
+/* Pantallas anchas (más de 1366px): texto e imagen lado a lado. La imagen tenía margin-top: 200px y quedaba
+   más abajo que el texto; ahora ambos se centran en vertical. */
+@media screen and (min-width: 1367px) {
+  .my-carousel {
+    width: min(85%, 1400px) !important;
+    margin-top: 40px !important;
+  }
+  .proyect-container {
+    align-items: center;
+    gap: 40px;
+  }
+  .img1 {
+    margin-top: 0;
+    max-height: none;
+    height: auto !important;
+  }
+  .my-carousel2 {
+    height: auto;
+    margin: 0;
+  }
+  .icoskill,
+  .iconew {
+    justify-content: center;
+    gap: 12px;
+    width: auto;
+    height: auto;
+    margin-left: 0;
+  }
+  .icoskill img,
+  .iconew img {
+    width: 50px !important;
+    height: 50px;
+    flex: none;
+  }
+  .wordpress {
+    margin-left: 0;
+  }
+}
+
+/* Móvil: cada sección medía al menos una pantalla y, si su contenido era corto, quedaban 250–370px negros
+   antes de la siguiente. Ahora miden lo que su contenido, unidas por una línea naranja con brillo. */
+@media screen and (max-width: 768px) {
+  .page1,
+  .page2,
+  .page3 {
+    min-height: 0;
+  }
+  /* márgenes de 80–200px pensados para escritorio, encima de cada título */
+  .homepage {
+    padding-bottom: 0;
+  }
+  .tskills,
+  .tcontact {
+    margin-top: 0 !important;
+  }
+  .tProjects {
+    padding-top: 0 !important;
+  }
+  .page1::after,
+  .page2::after,
+  .page3::after {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 80px;
+    margin: 30px auto;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, transparent, #F0AD4E 30%, #F0AD4E 70%, transparent);
+    filter: drop-shadow(0 0 4px #F0AD4E) drop-shadow(0 0 10px #F0AD4E);
+  }
+}
+
 /* Menú inferior en móvil: era transparente y sus íconos quedaban encima de los botones de Inicio.
    Ahora tiene fondo oscuro, y el botón de idioma no se encoge (el texto "Esp/Eng" se salía). */
 @media screen and (max-width: 768px) {
