@@ -2,12 +2,11 @@
 
 🔗 **Live site:** https://brayanso.github.io/Porfolio/
 
-This is my personal portfolio, built to showcase my profile: quality assurance, software development and technical writing.
+This is my personal portfolio, built to showcase my profile: quality assurance and software development.
 
 ## What this project demonstrates
 - **React development** — component-based structure, a bilingual (English/Spanish) toggle built from scratch, and full responsive design across mobile, tablet, and desktop breakpoints.
 - **QA mindset applied to my own work** — I manually tested this site across multiple screen sizes and devices to catch layout and content inconsistencies before publishing, the same process I use as a QA Engineer, applied here to my own code.
-- **Technical writing** — a case study, a product explainer, a how-to guide with code and social posts, based on a research project I designed and documented ([`writing/`](writing/README.md)).
 - **Attention to detail** — consistent content between desktop and mobile versions, a working contact form (EmailJS integration), and accessible navigation.
 
 ## Tech Stack
@@ -19,8 +18,7 @@ This is my personal portfolio, built to showcase my profile: quality assurance, 
 ## Sections
 - **Home** — introduction and current focus (QA Engineer with a full-stack foundation)
 - **Skills** — QA & Testing (Cypress, Postman) and Web Development (React, JavaScript, Python, SQL, and more)
-- **Projects** — Forex ML Validation Lab, Carhalla and NewCodecr, including the testing work done on each
-- **Technical Writing** — writing samples with context, audience, my role and process ([`writing/`](writing/README.md))
+- **Projects** — Forex ML Validation Lab, Autos360 and NewCodecr, including the testing work done on each
 - **Contact** — direct contact form
 
 ## Getting Started

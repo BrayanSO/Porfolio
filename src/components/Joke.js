@@ -5,59 +5,46 @@ import '../Styles/Joke.css';
 
 const codeSnippets = {
   en: `
-import { useState } from "react";
+BUG-001: Missing QA Engineer
+────────────────────────────
+Severity:   High
+Priority:   P1
+Env:        Production (yours)
+Status:     Open, needs triage
 
-// console.log("If something looks weird here, I already reported it myself");
+Steps to reproduce:
+  1. Review this portfolio
+  2. Leave without a message
 
-const [testStatus, setTestStatus] = useState("PASSED ✅");
-const [bugsFound, setBugsFound] = useState(0);
-const [buildStatus, setBuildStatus] = useState("200 OK");
-const [darkMode, setDarkMode] = useState(true);
-const [confidence, setConfidence] = useState("HIGH 🚀");
+Expected:   We schedule a call
+Actual:     Bugs in prod 🐛
 
-I'm excited to explore opportunities with your company.
+Fix:        Use the form ←
+Workaround: None known
 
-// I use dark mode because light attracts bugs 🐛
-
-QA Report:
-────────────────────────
-Test status: PASSED ✅
-Bugs found: 0 🐛
-Regression: PASSED 🟢
-Severity: NONE
-Environment: PRODUCTION 🚀
-Confidence: 99.9%
-
-// If something breaks after this...
-// it's probably a feature, not a bug.
-
+// Known issue: dark mode on,
+// because light attracts bugs.
 `,
   es: `
-import { useState } from "react";
+BUG-001: Falta un QA Engineer
+─────────────────────────────
+Severidad:  Alta
+Prioridad:  P1
+Entorno:    Tu producción
+Estado:     Abierto, sin triage
 
-// console.log("Si algo se ve raro aquí, ya lo reporté yo mismo");
+Pasos para reproducir:
+  1. Revisar este portfolio
+  2. Salir sin dejar mensaje
 
-const [testStatus, setTestStatus] = useState("PASSED ✅");
-const [bugsFound, setBugsFound] = useState(0);
-const [buildStatus, setBuildStatus] = useState("200 OK");
-const [darkMode, setDarkMode] = useState(true);
-const [confidence, setConfidence] = useState("HIGH 🚀");
+Esperado:   Una llamada
+Real:       Bugs en prod 🐛
 
-Estoy emocionado de explorar oportunidades con su empresa.
+Solución:   El formulario ←
+Workaround: No se conoce
 
-// Uso modo oscuro porque la luz atrae bugs 🐛
-QA Report:
-────────────────────────
-Test status: PASSED ✅
-Bugs found: 0 🐛
-Regression: PASSED 🟢
-Severity: NONE
-Environment: PRODUCTION 🚀
-Confidence: 99.9%
-
-// Si algo falla después de esto...
-// probablemente sea un feature, no un bug.
-
+// Issue conocido: modo oscuro,
+// porque la luz atrae bugs.
 `,
 };
 
@@ -66,7 +53,7 @@ const JokeComponent = ({ language }) => {
 
   return (
     <div className="code-block">
-      <SyntaxHighlighter language="jsx" style={tomorrow}>
+      <SyntaxHighlighter language="text" style={tomorrow}>
         {codeSnippet}
       </SyntaxHighlighter>
     </div>

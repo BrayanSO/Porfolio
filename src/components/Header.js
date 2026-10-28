@@ -8,7 +8,6 @@ import Home from './Home.js';
 import ContactMe from './ContactMe.js';
 import MobileMenu from './MobileMenu.js';
 import Skills2 from './Skills2.js';
-import Writing from './Writing.js';
 import '../Styles/Layout.css';   // al final: corrige alturas de las secciones en todos los tamaños
 
 class App extends React.Component {
@@ -55,7 +54,6 @@ class App extends React.Component {
           <button onClick={() => this.goToPage('home')}>{language === 'es' ? 'Inicio' : 'Home'}</button>
           <button onClick={() => this.goToPage('skills')}>{language === 'es' ? 'Habilidades' : 'Skills'}</button>
           <button onClick={() => this.goToPage('Projects')}>{language === 'es' ? 'Proyectos' : 'Projects'}</button>
-          <button onClick={() => this.goToPage('writing')}>{language === 'es' ? 'Redacción' : 'Writing'}</button>
           <button onClick={() => this.goToPage('contact')}>{language === 'es' ? 'Contactame' : 'Contact'}</button>
           <ToggleButton label={language === 'es' ? 'Eng' : 'Esp'} onChange={this.toggleLanguage} />
         </div>
@@ -73,10 +71,6 @@ class App extends React.Component {
           <div id="Projects" className="page3">
             <h2 className='tProjects'>{language === 'es' ? 'Mis Proyectos' : ' My Projects'}</h2>
             <Projects language={language}></Projects>
-          </div>
-          <div id="writing" className="page-writing">
-            <h2 className='twriting'>{language === 'es' ? 'Redacción técnica' : 'Technical Writing'}</h2>
-            <Writing language={language}></Writing>
           </div>
           <div id="contact" className="page4">
             <h2 className='tcontact'>{language === 'es' ? 'Contactame' : 'Contact Me'}</h2>

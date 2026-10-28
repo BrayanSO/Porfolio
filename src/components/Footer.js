@@ -20,7 +20,7 @@ const Footer = () => {
         <li><a href="https://twitter.com/BrayanSole25744" target='_blank' rel="noopener noreferrer"><IonIcon icon={logoTwitter} /></a></li>
 
       </ul>
-      <p>&copy;2024 Brayan Solera | All Rights Reserved</p>
+      <p>&copy;{new Date().getFullYear()} Brayan Solera | All Rights Reserved</p>
     </footer>
   );
 }

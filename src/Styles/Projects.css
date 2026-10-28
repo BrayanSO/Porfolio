@@ -196,3 +196,16 @@ a {
   }
 }
 
+
+/* Enlace a la demo en vivo (Autos360) */
+.demo-link {
+  display: inline-block;
+  margin: 12px auto;
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: #F0AD4E;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+.demo-link:hover { background: #f4bd6e; color: #000; }

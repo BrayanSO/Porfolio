@@ -29,9 +29,6 @@ const MobileMenu = ({ goToPage, language, toggleLanguage, isMobileMenuVisible })
         <button onClick={() => handleClick('Projects')}>
           {language === 'en' ? '💼' : '💼'} {/* Icono de proyectos */}
         </button>
-        <button onClick={() => handleClick('writing')}>
-          ✍️ {/* Icono de redacción técnica */}
-        </button>
         <button onClick={() => handleClick('contact')}>
           {language === 'en' ? '✉️' : '✉️'} {/* Icono de contacto */}
         </button>

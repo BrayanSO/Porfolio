@@ -1,19 +1,17 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../Styles/Projects.css';
-import proyecto1 from '../Images/proyecto1.png'; 
+import autos360 from '../Images/autos360.png';
+import autos360Video from '../Images/autos360.mp4';
 import proyecto2 from '../Images/proyecto2.png';
 import forex from '../Images/forex.svg';
 import icono2 from '../Images/icono2.png';
-import icono from '../Images/icono.png';
 import  MobileProjects from '../components/MobileProjects.js'
 import ReactIcon from '../icons/ReactIcon.png';
 import python_icon from '../icons/python_icon.png';
 import javascript  from '../icons/javascript.png';
 import sql_servericon from '../icons/sql_servericon.png';
-import css from '../icons/css.png';
-import api from '../icons/api.png';
 import Wordpress from '../icons/wordpress.png'
 import php from '../icons/php.png'
 
@@ -21,7 +19,14 @@ import php from '../icons/php.png'
 
 
 const Projects = ({ language }) => {
-  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  // Se recalcula al cambiar el ancho; si no, al agrandar la ventana queda la vista móvil sin sus estilos
+  const [isMobile, setIsMobile] = useState(() => window.matchMedia('(max-width: 768px)').matches);
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 768px)');
+    const onChange = (e) => setIsMobile(e.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
    // Referencia para controlar el carrusel manualmente
   const carouselRef = useRef(null);
 
@@ -39,8 +44,8 @@ const Projects = ({ language }) => {
   };
   return (
     <div className='page'> 
-     {/* NUEVOS BOTONES DE REGRESAR Y SIGUIENTE */}
-        <div className="custom-carousel-controls">
+     {/* NUEVOS BOTONES DE REGRESAR Y SIGUIENTE (solo con el carrusel) */}
+        {!isMobile && <div className="custom-carousel-controls">
           <button onClick={handlePrev} className="carousel-custom-btn prev-btn">
             {language === 'en' ? '' : ''}
              ←
@@ -49,7 +54,7 @@ const Projects = ({ language }) => {
             {language === 'en' ? '' : ''}
              →
           </button>
-        </div>
+        </div>}
     {isMobile ? ( // Renderiza MobileProjects solo en dispositivos móviles
         <MobileProjects language={language} />
       ) : (
@@ -62,7 +67,7 @@ const Projects = ({ language }) => {
         <div className="proyect-container">
           <div className="proyect-info">
             <h2>{language === 'en' ? 'Forex ML Validation Lab' : 'Laboratorio de validación Forex ML'}</h2>
-            <p>{language === 'en' ? "Tested 30+ trading strategies (machine learning, technical analysis and popular YouTube methods) against 347M real market ticks. I designed the validation method, directed an AI coding agent (Claude Code) to build it in Python, and verified every result, catching three bugs that made losing strategies look profitable. Includes paper and demo trading bots, a risk manager and 86 unit tests. Documented in my writing samples." : "Probé más de 30 estrategias de trading (machine learning, análisis técnico y métodos populares de YouTube) con 347 millones de ticks reales. Diseñé el método de validación, dirigí a un agente de IA (Claude Code) para construirlo en Python y verifiqué cada resultado, encontrando tres errores que hacían parecer rentables estrategias perdedoras. Incluye bots de paper y demo, gestor de riesgo y 86 pruebas unitarias. Documentado en mis muestras de redacción."}</p>
+            <p>{language === 'en' ? "Tested 30+ trading strategies (machine learning, technical analysis and popular YouTube methods) against 347M real market ticks. I designed the validation method, directed an AI coding agent (Claude Code) to build it in Python, and verified every result, catching three bugs that made losing strategies look profitable. Includes paper and demo trading bots, a risk manager and 86 unit tests." : "Probé más de 30 estrategias de trading (machine learning, análisis técnico y métodos populares de YouTube) con 347 millones de ticks reales. Diseñé el método de validación, dirigí a un agente de IA (Claude Code) para construirlo en Python y verifiqué cada resultado, encontrando tres errores que hacían parecer rentables estrategias perdedoras. Incluye bots de paper y demo, gestor de riesgo y 86 pruebas unitarias."}</p>
             <div className='icoskill'>
             <img src={python_icon} alt="Python" title="Python" className='python' />
             <img src={sql_servericon} alt="SQL" title="SQL" className='sql' />
@@ -79,40 +84,35 @@ const Projects = ({ language }) => {
         <div className="proyect-container">
           
           <div className="proyect-info">
-            <h2>{language === 'en' ? 'Carhalla' : 'Carhalla'}</h2>
-            <p>{language === 'en' ? 'I developed a web platform for car sales using JavaScript, React, Python, Flux, and API, ensuring an outstanding user experience. I implemented advanced data filters, premium post highlighting options, and a chat function to enhance functionality and user interaction. I achieved optimal performance with fast loading times and high data security. I also designed and executed manual test cases for the authentication and filtering flows, and performed API testing with Postman to validate the apps functionality. ' : 'Desarrollé una plataforma web de venta de autos usando JavaScript, React, Python, Flux y APIs, asegurando una experiencia de usuario excepcional. Implementé filtros de datos avanzados, opciones de destacado premium para publicaciones y una función de chat para mejorar la funcionalidad y la interacción del usuario. Logré un rendimiento óptimo con tiempos de carga rápidos y alta seguridad de datos. También diseñé y ejecuté casos de prueba manuales para los flujos de autenticación y filtrado, y realicé pruebas de API con Postman para validar el funcionamiento de la aplicación.'}</p>
+            <h2>Autos360</h2>
+            <p>{language === 'en' ? "B2B platform for car dealerships: the dealer records a short video walking around a car and the platform turns it into a real 3D model you can rotate (Gaussian Splatting with COLMAP and Brush), published in a catalog with filters, listing pages and WhatsApp contact. Includes a multi-dealer dashboard with invitations and server-side access checks on every request, automatic license-plate hiding with a detector I trained myself (YOLOX), and deployment on Cloudflare Workers, D1 and R2. I directed an AI coding agent (Claude Code) to build it and tested every flow on desktop and mobile, including the 3D viewer's performance on a real phone (from 26 to 38 fps)." : "Plataforma B2B para agencias de autos: la agencia graba un video corto dando la vuelta al auto y la plataforma lo convierte en un modelo 3D real que se puede girar (Gaussian Splatting con COLMAP y Brush), publicado en un catálogo con filtros, anuncios y contacto por WhatsApp. Incluye un panel para varias agencias con invitaciones y control de acceso en el servidor en cada petición, ocultado automático de placas con un detector que entrené yo mismo (YOLOX) y despliegue en Cloudflare Workers, D1 y R2. Dirigí a un agente de IA (Claude Code) para construirla y probé cada flujo en escritorio y móvil, incluido el rendimiento del visor 3D en un celular real (de 26 a 38 fps)."}</p>
             <div className='icoskill'>
             <img src={ReactIcon} alt="React" title="React" className='react' />
-            <img src={python_icon} alt="React" title="React" className='python' />
-            <img src={javascript} alt="React" title="React" className='javascript' />
-          <img src={sql_servericon} alt="React" title="React" className='sql' />
-          <img src={css} alt="React" title="React" className='css' />
-          <img src={api} alt="React" title="React" className='api' />
-           <img src="https://cdn.simpleicons.org/postman/FF6C37" alt="Postman" title="Postman" className='postman' />
-          
+            <img src={javascript} alt="JavaScript" title="JavaScript" className='javascript' />
+            <img src="https://cdn.simpleicons.org/threedotjs/FFFFFF" alt="three.js" title="three.js" className='postman' />
+            <img src={python_icon} alt="Python" title="Python" className='python' />
+            <img src="https://cdn.simpleicons.org/cloudflare/F38020" alt="Cloudflare" title="Cloudflare" className='postman' />
+            <img src="https://cdn.simpleicons.org/anthropic/FFFFFF" alt="Claude Code" title="Claude Code" className='postman' />
             </div>
-            <a href="https://github.com/BrayanSO/Carhalla" target="_blank" rel="noopener noreferrer" className="icono-link">
-              <img src={icono2} alt="Icono Personalizado" className="icono" />
+            <a href="https://autos360.autos360.workers.dev/autos360/#auto/e2ae0dc1" target="_blank" rel="noopener noreferrer" className="demo-link">
+              {language === 'en' ? 'Live demo ↗' : 'Ver demo ↗'}
             </a>
           </div>
-          <img src={proyecto1} alt="Imagen 1" className='img1' /> 
+          <video src={autos360Video} poster={autos360} autoPlay muted loop playsInline aria-label="Autos360 3D model of a car rotating" className='img1' />
         </div>
         <div className="proyect-container">
           <div className="proyect-info">
-            <h2>{language === 'en' ? 'NewCodecr' : 'NewCodecr'}</h2>
-            <p>{language === 'en' ? 'I led the development of NewCodecr, a freelance website offering specialized services in WordPress web development. I used WordPress and PHP to create a range of functionalities, from simple informative sites to complex platforms with integrated SEO, appointment scheduling, blogs, and ads. Implemented strong security measures resulting in a high security rating and safeguarded user data. Ensured responsive design and a seamless user experience, including messaging, contact section, meeting booking, and blog functionality. I also tested the platform extensively — conducting functional testing on core features (forms, scheduling, messaging), verifying responsive behavior across devices, and performing acceptance testing before production deployment.' : 'Lideré el desarrollo de NewCodecr, un sitio freelance que ofrece servicios especializados en desarrollo web con WordPress. Usé WordPress y PHP para crear una variedad de funcionalidades, desde sitios informativos simples hasta plataformas complejas con SEO integrado, agendamiento de citas, blogs y anuncios. Implementé medidas de seguridad robustas que resultaron en una alta calificación de seguridad y protección de los datos de usuario. Aseguré un diseño responsive y una experiencia de usuario fluida, incluyendo mensajería, sección de contacto, agendamiento de reuniones y funcionalidad de blog. También probé la plataforma de forma exhaustiva, realizando pruebas funcionales sobre las funciones principales (formularios, agendamiento, mensajería), verificando el comportamiento responsive en varios dispositivos, y realizando pruebas de aceptación antes del despliegue a producción.'}</p>
+            <h2>NewCodecr</h2>
+            <p>{language === 'en' ? "Freelance WordPress studio. I built client sites with WordPress and PHP (contact forms, appointment booking, blogs and basic SEO) and tested each one before launch: functional tests on forms and booking, responsive checks across devices, and acceptance testing with the client. (Site no longer online.)" : "Estudio freelance de WordPress. Construí sitios para clientes con WordPress y PHP (formularios de contacto, reserva de citas, blogs y SEO básico) y probé cada uno antes de publicarlo: pruebas funcionales de formularios y reservas, revisión responsive en varios dispositivos y pruebas de aceptación con el cliente. (El sitio ya no está en línea.)"}</p>
             <div className='iconew'>
-          <img src={Wordpress} alt="React" title="React" className='wordpress' />
-          <img src={php} alt="React" title="React" className='php' />
+          <img src={Wordpress} alt="WordPress" title="WordPress" className='wordpress' />
+          <img src={php} alt="PHP" title="PHP" className='php' />
           </div>
 
             
           </div> 
         <div className='my-carousel2'>
-          <img src={proyecto2} alt="Imagen 2" className='img2' />
-          <a href="https://www.NewCodecr.com" target="_blank" rel="noopener noreferrer">
-              <img src={icono} alt="Icono Personalizado" className="icono" />
-            </a>
+          <img src={proyecto2} alt="NewCodecr home page" className='img2' />
           </div>
         </div>
 
