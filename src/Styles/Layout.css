@@ -10,6 +10,105 @@
   min-height: 100vh;
 }
 
+/* Los botones del menú usan scrollIntoView: la sección quedaba pegada arriba, debajo del menú fijo, y cada título
+   tenía su propio margen (0, 100 o 200px), así que cada uno aterrizaba a una altura distinta. Ahora los títulos
+   no tienen margen propio y todos quedan 40px debajo del menú. */
+@media screen and (min-width: 769px) {
+  .page2,
+  .page3,
+  .page4 {
+    padding-top: 20px !important;
+    scroll-margin-top: 90px;
+  }
+  .tskills,
+  .tcontact {
+    margin-top: 0 !important;
+  }
+  .tProjects {
+    padding-top: 0 !important;
+  }
+}
+
+/* Contacto (la última sección): medía al menos una pantalla y el formulario tenía 300px de margen debajo, así que
+   al llegar con el menú el final de la página (el pie) quedaba muy abajo. Ahora termina poco después del formulario. */
+.page4 {
+  min-height: 0;
+}
+.tcontact {
+  margin-bottom: 30px !important;
+}
+/* las olas del pie suben 100px sobre el footer (top: -100px): 140px deja 40px libres antes de la ola */
+.contact-me-container {
+  margin-bottom: 140px !important;
+}
+/* Escritorio: Contact mide la pantalla menos el pie (~145px), así en pantallas altas no asoma Projects arriba. El título
+   llega 40px bajo el menú como en las demás secciones y una línea crece hasta el pie; su margen inferior de 120px
+   reemplaza el de 140px del formulario para que la ola no tape nada. */
+@media screen and (min-width: 769px) {
+  .page4 {
+    min-height: calc(100vh - 145px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-top: 110px !important;
+    scroll-margin-top: 0;
+  }
+  .contact-me-container {
+    margin-bottom: 0 !important;
+  }
+  .page4::after {
+    content: '';
+    display: block;
+    flex: 1 0 0;
+    width: 3px;
+    margin: 20px auto 120px;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, transparent, #F0AD4E 30%, #F0AD4E 70%, transparent);
+    filter: drop-shadow(0 0 4px #F0AD4E) drop-shadow(0 0 10px #F0AD4E);
+  }
+}
+/* el bug report (18 líneas a 16px) era lo más alto de la sección: en laptops de 768px de alto se cortaba */
+@media screen and (min-width: 769px) {
+  .code-block pre {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+}
+/* Pantallas anchas: Contact ocupaba el 70% del ancho (margin 15%), el formulario quedaba a la izquierda y el recuadro
+   del bug report crecía hasta ~740px con el texto chico. Ahora el par queda centrado con un ancho máximo. */
+@media screen and (min-width: 1367px) {
+  .contact-me-container {
+    max-width: 1100px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+  .contact-form {
+    width: 420px;
+  }
+  .code-example {
+    width: auto;
+  }
+}
+
+/* en móvil el menú está abajo: solo un respiro arriba del título */
+@media screen and (max-width: 768px) {
+  .page2,
+  .page3,
+  .page4 {
+    scroll-margin-top: 20px;
+  }
+  /* Header.css bajaba solo este título 40px con top: 40px; el bloque de íconos sube lo mismo para no separarse */
+  .tskills {
+    top: 0 !important;
+  }
+  .portfolio2 {
+    margin-top: 20px;
+  }
+}
+
 /* El carrusel de proyectos tenía una altura fija menor que sus tarjetas */
 .my-carousel {
   height: auto !important;
@@ -20,6 +119,47 @@
 .homepage {
   height: auto !important;
   padding-bottom: 60px;
+}
+
+/* Escritorio: el Inicio sumaba dos márgenes (200px del bloque + 160–210px de la foto), el nombre se montaba sobre
+   la foto (-20px) y los botones quedaban fuera de la pantalla. Ahora todo cabe en la primera pantalla con un
+   espaciado parejo debajo del menú. */
+@media screen and (min-width: 769px) {
+  /* centrado en la primera pantalla; el padding deja libre el menú fijo de arriba */
+  .page1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px !important;
+    box-sizing: border-box;
+  }
+  .homepage {
+    margin-top: 0 !important;
+    padding-bottom: 0;
+  }
+  .homepage-image {
+    margin-top: 0;
+    width: auto;
+    max-width: 350px;
+    /* la foto cede alto en pantallas bajas para que título, texto, botones y la línea quepan (~640px sin la foto) */
+    max-height: max(200px, calc(100vh - 640px));
+  }
+  .homepage-text2 {
+    margin-top: 20px !important;
+  }
+  .homepage-text2 p,
+  .homepage-text3 p {
+    margin: 0;
+    padding: 4px 0;
+  }
+  .homepage-text4 {
+    max-width: 900px;
+    margin: 16px auto 24px;
+  }
+  .homepage-text4 p {
+    margin: 0;
+    padding: 6px 20px;
+  }
 }
 
 /* El fondo de la página era transparente (el navegador lo pinta BLANCO): cualquier hueco entre secciones
@@ -147,17 +287,60 @@ body,
   .tProjects {
     padding-top: 0 !important;
   }
+}
+
+/* Línea naranja con brillo que une una sección con la siguiente (móvil y escritorio) */
+.page1::after,
+.page2::after,
+.page3::after {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 80px;
+  margin: 20px auto;
+  border-radius: 3px;
+  background: linear-gradient(to bottom, transparent, #F0AD4E 30%, #F0AD4E 70%, transparent);
+  filter: drop-shadow(0 0 4px #F0AD4E) drop-shadow(0 0 10px #F0AD4E);
+}
+
+/* Escritorio: Skills y Projects ocupan cada uno una pantalla (al navegar con el menú se ve una sola sección). El contenido
+   queda arriba, con el título 40px bajo el menú fijo, y la línea naranja crece hasta llenar el espacio que sobra antes de
+   la siguiente sección (mínimo 80px). Reemplaza el bloque de scroll-margin de arriba para estas dos secciones. */
+@media screen and (min-width: 769px) {
+  .page2,
+  .page3 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 110px !important;
+    scroll-margin-top: 0;
+  }
   .page1::after,
   .page2::after,
   .page3::after {
+    flex: 1 0 80px;
+  }
+  /* en el Inicio el espacio sobrante se reparte arriba (vacío) y abajo (línea): la foto sigue centrada */
+  .page1::before {
     content: '';
-    display: block;
-    width: 3px;
-    height: 80px;
-    margin: 30px auto;
-    border-radius: 3px;
-    background: linear-gradient(to bottom, transparent, #F0AD4E 30%, #F0AD4E 70%, transparent);
-    filter: drop-shadow(0 0 4px #F0AD4E) drop-shadow(0 0 10px #F0AD4E);
+    flex: 1 0 0;
+  }
+  /* márgenes inferiores que la línea ya reemplaza */
+  .portfolio {
+    margin-bottom: 0;
+  }
+  .my-carousel {
+    margin-bottom: 20px !important;
+  }
+  /* el carrusel medía lo del proyecto más alto y debajo de los cortos quedaba un hueco que la línea no alcanzaba;
+     los no seleccionados no aportan altura (dynamicHeight de la librería mide solo la primera imagen y lo rompía) */
+  .my-carousel .slider {
+    align-items: flex-start;
+  }
+  .my-carousel .slide:not(.selected) {
+    height: 0;
+    overflow: hidden;
   }
 }
 
