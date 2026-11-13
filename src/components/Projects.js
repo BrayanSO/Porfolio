@@ -4,16 +4,14 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../Styles/Projects.css';
 import autos360 from '../Images/autos360.png';
 import autos360Video from '../Images/autos360.mp4';
-import proyecto2 from '../Images/proyecto2.png';
+import citas from '../Images/citas.png';
+import newcode from '../Images/newcode.png';
 import forex from '../Images/forex.svg';
-import icono2 from '../Images/icono2.png';
 import  MobileProjects from '../components/MobileProjects.js'
 import ReactIcon from '../icons/ReactIcon.png';
 import python_icon from '../icons/python_icon.png';
 import javascript  from '../icons/javascript.png';
 import sql_servericon from '../icons/sql_servericon.png';
-import Wordpress from '../icons/wordpress.png'
-import php from '../icons/php.png'
 
 
 
@@ -28,7 +26,7 @@ const Projects = ({ language }) => {
     return () => mq.removeEventListener('change', onChange);
   }, []);
   // Barra con los nombres: el carrusel muestra el proyecto elegido aquí
-  const names = ['Forex ML Lab', 'Autos360', 'NewCodecr'];
+  const names = ['Forex ML Lab', 'Autos360', 'Citas', 'NewCode CR'];
   const [current, setCurrent] = useState(0);
   const go = (i) => setCurrent((i + names.length) % names.length);
   return (
@@ -67,8 +65,8 @@ const Projects = ({ language }) => {
             <img src="https://cdn.simpleicons.org/streamlit/FF4B4B" alt="Streamlit" title="Streamlit" className='postman' />
             <img src="https://cdn.simpleicons.org/anthropic/FFFFFF" alt="Claude Code" title="Claude Code" className='postman' />
             </div>
-            <a href="https://github.com/BrayanSO/Forex-ML-System/tree/validacion-estrategias" target="_blank" rel="noopener noreferrer" className="icono-link">
-              <img src={icono2} alt="GitHub" className="icono" />
+            <a href="https://github.com/BrayanSO/Porfolio/blob/main/writing/01-case-study-trading-strategies.md" target="_blank" rel="noopener noreferrer" className="demo-link">
+              {language === 'en' ? 'Case study ↗' : 'Caso de estudio ↗'}
             </a>
           </div>
           <img src={forex} alt="Forex ML Validation Lab results" className='img1' />
@@ -94,18 +92,41 @@ const Projects = ({ language }) => {
         </div>
         <div className="proyect-container">
           <div className="proyect-info">
-            <h2>NewCodecr</h2>
-            <p>{language === 'en' ? "Freelance WordPress studio. I built client sites with WordPress and PHP (contact forms, appointment booking, blogs and basic SEO) and tested each one before launch: functional tests on forms and booking, responsive checks across devices, and acceptance testing with the client. (Site no longer online.)" : "Estudio freelance de WordPress. Construí sitios para clientes con WordPress y PHP (formularios de contacto, reserva de citas, blogs y SEO básico) y probé cada uno antes de publicarlo: pruebas funcionales de formularios y reservas, revisión responsive en varios dispositivos y pruebas de aceptación con el cliente. (El sitio ya no está en línea.)"}</p>
-            <div className='iconew'>
-          <img src={Wordpress} alt="WordPress" title="WordPress" className='wordpress' />
-          <img src={php} alt="PHP" title="PHP" className='php' />
+            <h2>Citas</h2>
+            <p>{language === 'en' ? "Booking SaaS for small businesses (clinics, salons, barbershops). Owners manage services, staff, hours and time-off blocks from a Svelte panel; customers book through a web-component widget that any site can embed with one tag. Supabase backend: Postgres with row-level security, edge functions for staff invites and booking emails, and 32 pgTAP database tests covering slots and double booking. Live inside the Sonríe dental demo. Built by directing Claude Code; I defined the rules and tested every flow on desktop and mobile." : "SaaS de reservas para negocios pequeños (consultorios, salones, barberías). El dueño administra servicios, personal, horarios y bloqueos desde un panel en Svelte; los clientes reservan con un widget (web component) que cualquier página inserta con una sola etiqueta. Backend en Supabase: Postgres con seguridad por filas, funciones para invitar personal y avisar por correo, y 32 pruebas de base de datos (pgTAP) sobre espacios libres y reservas dobles. Funciona en vivo en la demo dental Sonríe. Construido dirigiendo a Claude Code; definí las reglas y probé cada flujo en escritorio y móvil."}</p>
+            <div className='icoskill'>
+            <img src="https://cdn.simpleicons.org/svelte/FF3E00" alt="Svelte" title="Svelte" className='postman' />
+            <img src="https://cdn.simpleicons.org/supabase/3FCF8E" alt="Supabase" title="Supabase" className='postman' />
+            <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" title="PostgreSQL" className='postman' />
+            <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" title="JavaScript" className='postman' />
+            <img src="https://cdn.simpleicons.org/cloudflare/F38020" alt="Cloudflare" title="Cloudflare" className='postman' />
+            <img src="https://cdn.simpleicons.org/anthropic/FFFFFF" alt="Claude Code" title="Claude Code" className='postman' />
+            </div>
+            <a href="https://dental.newcodecr.com/#agenda" target="_blank" rel="noopener noreferrer" className="demo-link">
+              {language === 'en' ? 'Live demo ↗' : 'Ver demo ↗'}
+            </a>
+            <a href="https://github.com/BrayanSO/Citas" target="_blank" rel="noopener noreferrer" className="demo-link">
+              {language === 'en' ? 'Code ↗' : 'Código ↗'}
+            </a>
           </div>
-
-            
-          </div> 
-        <div className='my-carousel2'>
-          <img src={proyecto2} alt="NewCodecr home page" className='img2' />
+          <img src={citas} alt="Citas booking widget inside the Sonríe dental demo" className='img1' />
+        </div>
+        <div className="proyect-container">
+          <div className="proyect-info">
+            <h2>NewCode CR</h2>
+            <p>{language === 'en' ? "My web studio for small businesses in Costa Rica. newcodecr.com is plain HTML, CSS and JavaScript on Cloudflare Workers, with a test environment (test.newcodecr.com) where every change is checked before it reaches production. It showcases live demo businesses on their own subdomains: a restaurant with cart and WhatsApp ordering, a dental clinic booking through Citas, real-estate search with filters and a car dealer with a payment calculator. It also ships real client sites such as Javi Surf Lessons." : "Mi estudio web para negocios pequeños en Costa Rica. newcodecr.com está hecho en HTML, CSS y JavaScript sobre Cloudflare Workers, con un entorno de pruebas (test.newcodecr.com) donde reviso cada cambio antes de que llegue a producción. Muestra negocios de demostración en vivo, cada uno en su subdominio: restaurante con carrito y pedido por WhatsApp, clínica dental que agenda con Citas, buscador de propiedades con filtros y agencia de autos con calculadora de cuota. También entrega sitios de clientes reales como Javi Surf Lessons."}</p>
+            <div className='icoskill'>
+            <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" title="HTML5" className='postman' />
+            <img src="https://cdn.simpleicons.org/css/1572B6" alt="CSS" title="CSS" className='postman' />
+            <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" title="JavaScript" className='postman' />
+            <img src="https://cdn.simpleicons.org/cloudflare/F38020" alt="Cloudflare" title="Cloudflare" className='postman' />
+            <img src="https://cdn.simpleicons.org/anthropic/FFFFFF" alt="Claude Code" title="Claude Code" className='postman' />
+            </div>
+            <a href="https://newcodecr.com" target="_blank" rel="noopener noreferrer" className="demo-link">
+              {language === 'en' ? 'Visit site ↗' : 'Ver sitio ↗'}
+            </a>
           </div>
+          <img src={newcode} alt="newcodecr.com live examples section" className='img1' />
         </div>
 
       </Carousel>

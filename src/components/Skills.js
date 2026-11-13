@@ -10,7 +10,7 @@ import {
   faNode, 
   faGit, 
   faBootstrap, 
-  faWordpress,
+  faCloudflare,
 
 } from '@fortawesome/free-brands-svg-icons';
 import '../Styles/Skills.css';
@@ -25,7 +25,7 @@ const skillsData = [
   { icon: faGit, label: "Git", color: "#F05032" },
   { icon: faBootstrap, label: "Bootstrap", color: "#563D7C" },
   { icon: faDatabase, label: "SQL", color: "#336791" }, // Icono para SQL
-  { icon: faWordpress, label: "WordPress", color: "#21759B" },
+  { icon: faCloudflare, label: "Cloudflare", color: "#F38020" },
 
   
 ];

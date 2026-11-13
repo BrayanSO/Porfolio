@@ -18,7 +18,7 @@ This is my personal portfolio, built to showcase my profile: quality assurance a
 ## Sections
 - **Home** — introduction and current focus (QA Engineer with a full-stack foundation)
 - **Skills** — QA & Testing (Cypress, Postman) and Web Development (React, JavaScript, Python, SQL, and more)
-- **Projects** — Forex ML Validation Lab, Autos360 and NewCodecr, including the testing work done on each
+- **Projects** — Forex ML Validation Lab, Autos360, Citas (booking SaaS) and NewCode CR (web studio), with live demos and the testing work done on each
 - **Contact** — direct contact form
 
 ## Getting Started

@@ -20,17 +20,17 @@ const Home = ({ language }) => {
         <p>{language === 'en' ? "Hi, I'm Brayan Solera" : '¡Hola! Soy Brayan Solera'}</p>
       </div>
       <div className="homepage-text3">
-        <p>{language === 'en' ? 'QA Engineer' : 'Ingeniero de QA'}</p>
+        <p>{language === 'en' ? 'QA Engineer & Web Developer' : 'Ingeniero de QA y Desarrollador Web'}</p>
       </div>
       <div className="homepage-text4">
         {language === 'en' ? 
           <div>
-            <p>QA Engineer with hands-on experience in manual and automated testing (Cypress, Postman), backed by a full-stack development foundation in React and SQL.</p>
+            <p>QA Engineer with hands-on experience in manual and automated testing (Cypress, Postman) who also builds and ships web products: a booking SaaS, a 3D car platform and my own web studio, built by directing AI coding agents and verified the way a tester would.</p>
             <p>Let's build reliable, well-tested digital solutions together.</p>
           </div>
           : 
           <div>
-            <p>Ingeniero de QA con experiencia práctica en pruebas manuales y automatizadas (Cypress, Postman), respaldada por una base en desarrollo full-stack con React y SQL.</p>
+            <p>Ingeniero de QA con experiencia práctica en pruebas manuales y automatizadas (Cypress, Postman) que además construye y publica productos web: un SaaS de reservas, una plataforma de autos en 3D y mi propio estudio web, construidos dirigiendo agentes de IA y verificados como lo haría un tester.</p>
             <p>Construyamos juntos soluciones digitales confiables y bien probadas.</p>
           </div>
         }

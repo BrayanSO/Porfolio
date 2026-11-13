@@ -2,15 +2,13 @@ import React from 'react';
 import '../Styles/MobileProjects.css';
 import autos360 from '../Images/autos360.png';
 import autos360Video from '../Images/autos360.mp4';
-import proyecto2 from '../Images/proyecto2.png';
+import citas from '../Images/citas.png';
+import newcode from '../Images/newcode.png';
 import forex from '../Images/forex.svg';
-import icono2 from '../Images/icono2.png';
 import ReactIcon from '../icons/ReactIcon.png';
 import python_icon from '../icons/python_icon.png';
 import javascript  from '../icons/javascript.png';
 import sql_servericon from '../icons/sql_servericon.png';
-import Wordpress from '../icons/wordpress.png'
-import php from '../icons/php.png'
 
 
 const MobileProjects = ({ language }) => {
@@ -29,8 +27,8 @@ const MobileProjects = ({ language }) => {
           </div>
         </div>
       </div>
-      <a href="https://github.com/BrayanSO/Forex-ML-System/tree/validacion-estrategias" target="_blank" rel="noopener noreferrer" className="icono-link">
-      <img src={icono2} alt="GitHub" className="iconogit" /> </a>
+      <a href="https://github.com/BrayanSO/Porfolio/blob/main/writing/01-case-study-trading-strategies.md" target="_blank" rel="noopener noreferrer" className="demo-link">
+      {language === 'en' ? 'Case study ↗' : 'Caso de estudio ↗'}</a>
 
       <div className="mobile-proyect2">
         <h2>Autos360</h2>
@@ -52,17 +50,42 @@ const MobileProjects = ({ language }) => {
 
 
       <div className="mobile-proyect2">
-        <h2>NewCodecr</h2>
-        <img src={proyecto2} alt="NewCodecr home page" className='mobile-img' />
+        <h2>Citas</h2>
+        <img src={citas} alt="Citas booking widget inside the Sonríe dental demo" className='mobile-img' />
         <div className="mobile-proyect-info">
-          <p>{language === 'en' ? "Freelance WordPress studio: client sites with WordPress and PHP (forms, booking, blogs), each tested before launch: functional, responsive and acceptance testing. (Site no longer online.)" : "Estudio freelance de WordPress: sitios para clientes con WordPress y PHP (formularios, reservas, blogs), cada uno probado antes de publicarse: pruebas funcionales, responsive y de aceptación. (El sitio ya no está en línea.)"}</p>
+          <p>{language === 'en' ? "Booking SaaS for small businesses: Svelte owner panel, embeddable widget and a Supabase backend with row-level security and 32 pgTAP tests. Live in the dental demo." : "SaaS de reservas para negocios pequeños: panel en Svelte, widget que se inserta en cualquier página y backend en Supabase con seguridad por filas y 32 pruebas pgTAP. En vivo en la demo dental."}</p>
           <div className="technologies">
-          <img src={Wordpress} alt="WordPress" title="WordPress" className='icono' />
-          <img src={php} alt="PHP" title="PHP" className='icono' />
+          <img src="https://cdn.simpleicons.org/svelte/FF3E00" alt="Svelte" title="Svelte" className='icono' />
+          <img src="https://cdn.simpleicons.org/supabase/3FCF8E" alt="Supabase" title="Supabase" className='icono' />
+          <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" title="PostgreSQL" className='icono' />
+          <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" title="JavaScript" className='icono' />
+          <img src="https://cdn.simpleicons.org/cloudflare/F38020" alt="Cloudflare" title="Cloudflare" className='icono' />
+          <img src="https://cdn.simpleicons.org/anthropic/FFFFFF" alt="Claude Code" title="Claude Code" className='icono' />
           </div>
-         
         </div>
       </div>
+      <a href="https://dental.newcodecr.com/#agenda" target="_blank" rel="noopener noreferrer" className="demo-link">
+      {language === 'en' ? 'Live demo ↗' : 'Ver demo ↗'}</a>
+      <a href="https://github.com/BrayanSO/Citas" target="_blank" rel="noopener noreferrer" className="demo-link">
+      {language === 'en' ? 'Code ↗' : 'Código ↗'}</a>
+
+      <div className="mobile-proyect2">
+        <h2>NewCode CR</h2>
+        <img src={newcode} alt="newcodecr.com live examples section" className='mobile-img' />
+        <div className="mobile-proyect-info">
+          <p>{language === 'en' ? "My web studio: newcodecr.com on Cloudflare Workers with a test environment, live demo businesses on their own subdomains and real client sites." : "Mi estudio web: newcodecr.com en Cloudflare Workers con entorno de pruebas, negocios de demostración en vivo con subdominio propio y sitios de clientes reales."}</p>
+          <div className="technologies">
+          <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" title="HTML5" className='icono' />
+          <img src="https://cdn.simpleicons.org/css/1572B6" alt="CSS" title="CSS" className='icono' />
+          <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" title="JavaScript" className='icono' />
+          <img src="https://cdn.simpleicons.org/cloudflare/F38020" alt="Cloudflare" title="Cloudflare" className='icono' />
+          <img src="https://cdn.simpleicons.org/anthropic/FFFFFF" alt="Claude Code" title="Claude Code" className='icono' />
+          </div>
+        </div>
+      </div>
+      <a href="https://newcodecr.com" target="_blank" rel="noopener noreferrer" className="demo-link">
+      {language === 'en' ? 'Visit site ↗' : 'Ver sitio ↗'}</a>
+
     </div>
   );
 };
