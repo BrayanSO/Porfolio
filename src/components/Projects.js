@@ -122,7 +122,7 @@ const Projects = ({ language }) => {
               {language === 'en' ? 'Visit site ↗' : 'Ver sitio ↗'}
             </a>
           </div>
-          <img src={newcode} alt="newcodecr.com live examples section" className='img1' />
+          <img src={newcode} alt="newcodecr.com home page" className='img1' />
         </div>
 
       </Carousel>

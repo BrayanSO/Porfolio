@@ -384,3 +384,28 @@ body,
     max-height: 30vh;
   }
 }
+
+/* Móvil: cada proyecto en su tarjeta (imagen, texto, íconos y botones juntos) para que se vea dónde empieza y termina */
+@media screen and (max-width: 768px) {
+  .mobile-card {
+    box-sizing: border-box;
+    margin: 0 0 28px !important;
+    padding: 16px 0 20px;
+    border: 1px solid rgba(240, 173, 78, 0.35);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 0 18px rgba(240, 173, 78, 0.08);
+    text-align: center;
+  }
+  .mobile-card .mobile-img,
+  .mobile-card .media3d {
+    width: calc(100% - 32px);
+    margin: 0 16px;
+  }
+  .mobile-card .mobile-proyect-info {
+    margin-top: 8px;
+  }
+  .mobile-card .demo-link {
+    margin: 4px 6px 0;
+  }
+}

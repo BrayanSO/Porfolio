@@ -73,51 +73,6 @@
 
 /* Agregamos bordes de colores correspondientes a los iconos */
 
-.skill:nth-child(1) {
-  border: 2px solid #111111; 
-}
-
-.skill:nth-child(2) {
-  border: 2px solid #F05032; /* HTML5 */
-}
-
-.skill:nth-child(3) {
-  border: 2px solid #190ae4;   /* CSS3 */
-}
-
-.skill:nth-child(4) {
-  border: 2px solid #c5c332; /* JavaScript */
-}
-
-.skill:nth-child(5) {
-  border: 2px solid #61DAFB; /* React */
-}
-
-.skill:nth-child(6) {
-  border: 2px solid #3776AB; /* Python */
-}
-
-.skill:nth-child(7) {
-  border: 2px solid #68A063; /* Node.js */  
-}
-
-.skill:nth-child(8) {
-  border: 2px solid #F05032; /* Git */
-}
-
-.skill:nth-child(9) {
-  border: 2px solid #563D7C; /* Bootstrap */
-}
-
-.skill:nth-child(10) {
-  border: 2px solid #21759B;  /*SQL */
-}
-
-.skill:nth-child(11) {
-  border: 2px solid #21759B; /* WordPress */
-}
-
-
 .skill span {
   font-size: 14px;
   text-align: center;
@@ -140,7 +95,8 @@
     height: 90px;
   }
   
-  .skill svg {
+  .skill svg,
+  .skill img {
     width: 45px !important;
     height: 45px !important;
   }

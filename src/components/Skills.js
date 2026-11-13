@@ -1,51 +1,39 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import { 
-  faHtml5, 
-  faCss3Alt, 
-  faJs, 
-  faReact, 
-  faPython, 
-  faNode, 
-  faGit, 
-  faBootstrap, 
-  faCloudflare,
-
-} from '@fortawesome/free-brands-svg-icons';
 import '../Styles/Skills.css';
 
+// Lo que se usa en los proyectos del portfolio (Autos360, Citas, NewCode CR, Forex ML); íconos de simpleicons como en Skills2
 const skillsData = [
-  { icon: faHtml5, label: "HTML5", color: "#E44D26" },
-  { icon: faCss3Alt, label: "CSS3", color: "#264DE4" },
-  { icon: faJs, label: "JavaScript", color: "#F7DF1E" },
-  { icon: faReact, label: "React", color: "#61DAFB" },
-  { icon: faPython, label: "Python", color: "#3776AB" },
-  { icon: faNode, label: "Node.js", color: "#68A063" },
-  { icon: faGit, label: "Git", color: "#F05032" },
-  { icon: faBootstrap, label: "Bootstrap", color: "#563D7C" },
-  { icon: faDatabase, label: "SQL", color: "#336791" }, // Icono para SQL
-  { icon: faCloudflare, label: "Cloudflare", color: "#F38020" },
-
-  
+  { slug: "html5", hex: "E34F26", label: "HTML5" },
+  { slug: "css", hex: "1572B6", label: "CSS" },
+  { slug: "javascript", hex: "F7DF1E", label: "JavaScript" },
+  { slug: "react", hex: "61DAFB", label: "React" },
+  { slug: "svelte", hex: "FF3E00", label: "Svelte" },
+  { slug: "threedotjs", hex: "FFFFFF", label: "three.js" },
+  { slug: "nodedotjs", hex: "5FA04E", label: "Node.js" },
+  { slug: "python", hex: "3776AB", label: "Python" },
+  { slug: "postgresql", hex: "4169E1", label: "PostgreSQL" },
+  { slug: "supabase", hex: "3FCF8E", label: "Supabase" },
+  { slug: "cloudflare", hex: "F38020", label: "Cloudflare" },
+  { slug: "git", hex: "F05032", label: "Git" },
+  { slug: "anthropic", hex: "FFFFFF", label: "Claude Code" },
 ];
 
 const Skills = () => {
   return (
-    <div className="portfolio"> 
+    <div className="portfolio">
      <h2 className='title2'>Web Development</h2>
-      {skillsData.map((skill, index) => (
-        <Skill key={index} icon={skill.icon} label={skill.label} color={skill.color} />
+      {skillsData.map((skill) => (
+        <Skill key={skill.label} {...skill} />
       ))}
-      
+
     </div>
   );
 };
 
-const Skill = ({ icon, label, color }) => {
+const Skill = ({ slug, hex, label }) => {
   return (
-    <div className="skill" style={{ color }}>
-      <FontAwesomeIcon icon={icon} size="5x" />
+    <div className="skill" style={{ color: `#${hex}`, borderColor: `#${hex}` }}>
+      <img src={`https://cdn.simpleicons.org/${slug}/${hex}`} alt={label} width={80} height={80} />
       <span>{label}</span>
     </div>
   );

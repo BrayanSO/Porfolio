@@ -13,7 +13,7 @@ import sql_servericon from '../icons/sql_servericon.png';
 const MobileProjects = ({ language }) => {
   return (
     <div className='mobile-projects'>
-      <div className="mobile-proyect">
+      <div className="mobile-proyect mobile-card">
         <h2>{language === 'en' ? 'Forex ML Validation Lab' : 'Laboratorio Forex ML'}</h2>
         <img src={forex} alt="Forex ML Validation Lab results" className='mobile-img' />
         <div className="mobile-proyect-info">
@@ -25,11 +25,11 @@ const MobileProjects = ({ language }) => {
           <img src="https://cdn.simpleicons.org/streamlit/FF4B4B" alt="Streamlit" title="Streamlit" className='icono' />
           </div>
         </div>
-      </div>
       <a href="https://github.com/BrayanSO/Porfolio/blob/main/writing/01-case-study-trading-strategies.md" target="_blank" rel="noopener noreferrer" className="demo-link">
       {language === 'en' ? 'Case study ↗' : 'Caso de estudio ↗'}</a>
+      </div>
 
-      <div className="mobile-proyect2">
+      <div className="mobile-proyect2 mobile-card">
         <h2>Autos360</h2>
         <Autos360Media language={language} className='mobile-img' />
         <div className="mobile-proyect-info">
@@ -43,12 +43,12 @@ const MobileProjects = ({ language }) => {
           <img src="https://cdn.simpleicons.org/anthropic/FFFFFF" alt="Claude Code" title="Claude Code" className='icono' />
           </div>
         </div>
-      </div>
       <a href="https://autos360.autos360.workers.dev/autos360/#auto/ca232863" target="_blank" rel="noopener noreferrer" className="demo-link">
       {language === 'en' ? 'Live demo ↗' : 'Ver demo ↗'}</a>
+      </div>
 
 
-      <div className="mobile-proyect2">
+      <div className="mobile-proyect2 mobile-card">
         <h2>Citas</h2>
         <img src={citas} alt="Citas booking widget inside the Sonríe dental demo" className='mobile-img' />
         <div className="mobile-proyect-info">
@@ -62,13 +62,13 @@ const MobileProjects = ({ language }) => {
           <img src="https://cdn.simpleicons.org/anthropic/FFFFFF" alt="Claude Code" title="Claude Code" className='icono' />
           </div>
         </div>
-      </div>
       <a href="https://dental.newcodecr.com/#agenda" target="_blank" rel="noopener noreferrer" className="demo-link">
       {language === 'en' ? 'Live demo ↗' : 'Ver demo ↗'}</a>
+      </div>
 
-      <div className="mobile-proyect2">
+      <div className="mobile-proyect2 mobile-card">
         <h2>NewCode CR</h2>
-        <img src={newcode} alt="newcodecr.com live examples section" className='mobile-img' />
+        <img src={newcode} alt="newcodecr.com home page" className='mobile-img' />
         <div className="mobile-proyect-info">
           <p>{language === 'en' ? "My web studio: newcodecr.com on Cloudflare Workers with a test environment, live demo businesses on their own subdomains and real client sites." : "Mi estudio web: newcodecr.com en Cloudflare Workers con entorno de pruebas, negocios de demostración en vivo con subdominio propio y sitios de clientes reales."}</p>
           <div className="technologies">
@@ -79,9 +79,9 @@ const MobileProjects = ({ language }) => {
           <img src="https://cdn.simpleicons.org/anthropic/FFFFFF" alt="Claude Code" title="Claude Code" className='icono' />
           </div>
         </div>
-      </div>
       <a href="https://newcodecr.com" target="_blank" rel="noopener noreferrer" className="demo-link">
       {language === 'en' ? 'Visit site ↗' : 'Ver sitio ↗'}</a>
+      </div>
 
     </div>
   );
