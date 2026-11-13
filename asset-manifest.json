@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Porfolio/static/css/main.7be96ca2.css",
-    "main.js": "/Porfolio/static/js/main.4a6e3979.js",
+    "main.js": "/Porfolio/static/js/main.631afc10.js",
     "static/js/9511.559e0f88.chunk.js": "/Porfolio/static/js/9511.559e0f88.chunk.js",
     "static/js/3513.335bac05.chunk.js": "/Porfolio/static/js/3513.335bac05.chunk.js",
     "static/js/1470.40074b90.chunk.js": "/Porfolio/static/js/1470.40074b90.chunk.js",
@@ -76,19 +76,17 @@
     "static/js/6982.c6a4ac77.chunk.js": "/Porfolio/static/js/6982.c6a4ac77.chunk.js",
     "static/js/6385.05f9dc1b.chunk.js": "/Porfolio/static/js/6385.05f9dc1b.chunk.js",
     "static/media/autos360.mp4": "/Porfolio/static/media/autos360.cdd2da5b81a834606c9f.mp4",
-    "static/media/proyecto2.png": "/Porfolio/static/media/proyecto2.d4ca6c54b3567a46b795.png",
+    "static/media/newcode.png": "/Porfolio/static/media/newcode.3719ec5a15796b606d21.png",
+    "static/media/citas.png": "/Porfolio/static/media/citas.ebc08aad1296ae67e202.png",
     "static/media/autos360.png": "/Porfolio/static/media/autos360.ae6d425ad0459e04098e.png",
     "static/media/pic.jpeg": "/Porfolio/static/media/pic.f1db6c73f3d0487cb65a.jpeg",
-    "static/media/icono2.png": "/Porfolio/static/media/icono2.988c89f4324c1569e481.png",
-    "static/media/php.png": "/Porfolio/static/media/php.029374a3097c6eea6eb3.png",
     "static/media/sql_servericon.png": "/Porfolio/static/media/sql_servericon.5d49229070799a508017.png",
     "static/media/python_icon.png": "/Porfolio/static/media/python_icon.eb27b3a10d36bee4821a.png",
-    "static/media/wordpress.png": "/Porfolio/static/media/wordpress.11ed091523e3152b651f.png",
     "static/media/ReactIcon.png": "/Porfolio/static/media/ReactIcon.44ac42b34dd25cd5bcb9.png",
     "static/media/forex.svg": "/Porfolio/static/media/forex.12536c031a2baca95a5d3041cf809266.svg",
     "index.html": "/Porfolio/index.html",
     "main.7be96ca2.css.map": "/Porfolio/static/css/main.7be96ca2.css.map",
-    "main.4a6e3979.js.map": "/Porfolio/static/js/main.4a6e3979.js.map",
+    "main.631afc10.js.map": "/Porfolio/static/js/main.631afc10.js.map",
     "9511.559e0f88.chunk.js.map": "/Porfolio/static/js/9511.559e0f88.chunk.js.map",
     "3513.335bac05.chunk.js.map": "/Porfolio/static/js/3513.335bac05.chunk.js.map",
     "1470.40074b90.chunk.js.map": "/Porfolio/static/js/1470.40074b90.chunk.js.map",
@@ -165,6 +163,6 @@
   },
   "entrypoints": [
     "static/css/main.7be96ca2.css",
-    "static/js/main.4a6e3979.js"
+    "static/js/main.631afc10.js"
   ]
 }
