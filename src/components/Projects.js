@@ -105,9 +105,6 @@ const Projects = ({ language }) => {
             <a href="https://dental.newcodecr.com/#agenda" target="_blank" rel="noopener noreferrer" className="demo-link">
               {language === 'en' ? 'Live demo ↗' : 'Ver demo ↗'}
             </a>
-            <a href="https://github.com/BrayanSO/Citas" target="_blank" rel="noopener noreferrer" className="demo-link">
-              {language === 'en' ? 'Code ↗' : 'Código ↗'}
-            </a>
           </div>
           <img src={citas} alt="Citas booking widget inside the Sonríe dental demo" className='img1' />
         </div>
