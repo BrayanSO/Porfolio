@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Styles/MobileProjects.css';
-import autos360 from '../Images/autos360.png';
-import autos360Video from '../Images/autos360.mp4';
+import Autos360Media from './Autos360Media.js';
 import citas from '../Images/citas.png';
 import newcode from '../Images/newcode.png';
 import forex from '../Images/forex.svg';
@@ -32,7 +31,7 @@ const MobileProjects = ({ language }) => {
 
       <div className="mobile-proyect2">
         <h2>Autos360</h2>
-        <video src={autos360Video} poster={autos360} autoPlay muted loop playsInline aria-label="Autos360 3D model of a car rotating" className='mobile-img' />
+        <Autos360Media language={language} className='mobile-img' />
         <div className="mobile-proyect-info">
           <p>{language === 'en' ? "Car dealers record a short video and get a real 3D model of the car to sell online (Gaussian Splatting), with catalog, listings and a multi-dealer dashboard on Cloudflare. Built by directing Claude Code; I tested every flow on desktop and mobile." : "Las agencias graban un video corto y obtienen un modelo 3D real del auto para venderlo en línea (Gaussian Splatting), con catálogo, anuncios y panel para varias agencias en Cloudflare. Construida dirigiendo a Claude Code; probé cada flujo en escritorio y móvil."}</p>
           <div className="technologies">
@@ -45,7 +44,7 @@ const MobileProjects = ({ language }) => {
           </div>
         </div>
       </div>
-      <a href="https://autos360.autos360.workers.dev/autos360/#auto/e2ae0dc1" target="_blank" rel="noopener noreferrer" className="demo-link">
+      <a href="https://autos360.autos360.workers.dev/autos360/#auto/ca232863" target="_blank" rel="noopener noreferrer" className="demo-link">
       {language === 'en' ? 'Live demo ↗' : 'Ver demo ↗'}</a>
 
 

@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../Styles/Projects.css';
-import autos360 from '../Images/autos360.png';
-import autos360Video from '../Images/autos360.mp4';
+import Autos360Media from './Autos360Media.js';
 import citas from '../Images/citas.png';
 import newcode from '../Images/newcode.png';
 import forex from '../Images/forex.svg';
@@ -84,11 +83,11 @@ const Projects = ({ language }) => {
             <img src="https://cdn.simpleicons.org/cloudflare/F38020" alt="Cloudflare" title="Cloudflare" className='postman' />
             <img src="https://cdn.simpleicons.org/anthropic/FFFFFF" alt="Claude Code" title="Claude Code" className='postman' />
             </div>
-            <a href="https://autos360.autos360.workers.dev/autos360/#auto/e2ae0dc1" target="_blank" rel="noopener noreferrer" className="demo-link">
+            <a href="https://autos360.autos360.workers.dev/autos360/#auto/ca232863" target="_blank" rel="noopener noreferrer" className="demo-link">
               {language === 'en' ? 'Live demo ↗' : 'Ver demo ↗'}
             </a>
           </div>
-          <video src={autos360Video} poster={autos360} autoPlay muted loop playsInline aria-label="Autos360 3D model of a car rotating" className='img1' />
+          <Autos360Media language={language} className='img1' />
         </div>
         <div className="proyect-container">
           <div className="proyect-info">

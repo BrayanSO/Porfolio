@@ -238,3 +238,35 @@ a {
   text-decoration: none;
 }
 .demo-link:hover { background: #f4bd6e; color: #000; }
+
+/* Autos360: video con botón "Girar en 3D" que lo cambia por el visor de Autos360 (#embed/<id>) */
+.media3d {
+  position: relative;
+}
+.img1.media3d {
+  width: 640px; /* el iframe no tiene ancho propio como el video: se fija y .img1 lo limita */
+}
+/* react-responsive-carousel le pone a todo iframe de una diapositiva width: calc(100% - 80px) y márgenes de 40px */
+.carousel .slide .media3d-view {
+  width: 100%;
+  margin: 0;
+}
+.media3d-view {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 0;
+  border-radius: 12px;
+  background: #07080b;
+}
+.media3d-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+}
